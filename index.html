@@ -1,0 +1,3006 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#FAF7F2" />
+<!-- Private invitation: keep it out of search engines. -->
+<meta name="robots" content="noindex, nofollow, noarchive" />
+<title>A Nod to Reem</title>
+<meta name="description" content="A private invitation for Reem Amr to NOD Speciality Coffee Bar's new home in the Fifth Settlement." />
+<!-- The card WhatsApp shows under the link. WhatsApp needs the full address of preview.png, so this
+     assumes the site is published with GitHub Pages (elattar343-bot/nod-reem); change both addresses if it lives elsewhere. -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://elattar343-bot.github.io/nod-reem/" />
+<meta property="og:title" content="A nod to Reem" />
+<meta property="og:description" content="You’re invited to coffee &amp; breakfast with a view · Saturday, 31 October, 11:00 AM · NOD Speciality Coffee Bar, Fifth Settlement." />
+<meta property="og:image" content="https://elattar343-bot.github.io/nod-reem/preview.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Courier+Prime:wght@400;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" />
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<style>
+  html, body { margin: 0; background: #FAF7F2; }
+  #boot { min-height: 100dvh; display: grid; place-items: center; color: #1E1915; text-align: center; }
+  #boot .mark { font: 600 26px/1 "Playfair Display", Georgia, serif; letter-spacing: .3em; padding-left: .3em; }
+  #boot .sub { margin-top: 12px; font: 500 10px/1 Inter, system-ui, sans-serif; letter-spacing: .32em; color: #8C6239; text-transform: uppercase; animation: bootPulse 1.6s ease-in-out infinite; }
+  @keyframes bootPulse { 50% { opacity: .35; } }
+  #boot .stuck { margin: 24px auto 0; max-width: 280px; font: 400 13px/1.55 Inter, system-ui, sans-serif; color: #2C221E; }
+  #boot .stuck p { margin: 4px 0; }
+  #boot .stuck a { color: #8C6239; }
+  #boot .stuck small { display: block; margin-top: 12px; font-size: 11px; color: rgba(44,34,30,.5); word-break: break-word; }
+  #boot .hint { margin: 28px auto 0; max-width: 270px; font: 400 13px/1.55 Inter, system-ui, sans-serif; color: rgba(44,34,30,.7); }
+</style>
+</head>
+<body>
+<div id="root">
+  <div id="boot"><div>
+    <div class="mark">NOD</div><div class="sub">Brewing your invitation…</div>
+    <!-- Only seen where scripts can't run, such as a file preview in WhatsApp, Mail or Files. -->
+    <p class="hint" id="boot-hint">If this screen doesn't change, open the invitation's link in Safari or Chrome. It can't play inside a file preview.</p>
+  </div></div>
+</div>
+<script>document.getElementById("boot-hint").style.display = "none";</script>
+<script>
+  // If the invitation can't start (slow or blocked network, old browser), say so instead of waiting forever.
+  // When it's opened from a computer on the same Wi-Fi, problems are also reported back to that computer.
+  (function () {
+    var problems = [];
+    var local = /^(192\.168\.|10\.|172\.(1[6-9]|2\d|3[01])\.)/.test(location.hostname);
+    function report(msg) {
+      problems.push(msg);
+      if (local) {
+        try { new Image().src = "/__log?" + encodeURIComponent(msg + " | " + navigator.userAgent); } catch (e) {}
+      }
+    }
+    window.addEventListener("error", function (e) {
+      var t = e.target;
+      if (t && t.tagName === "SCRIPT") report("couldn't load " + t.src);
+      else report((e.message || "error") + (e.lineno ? " (line " + e.lineno + ":" + e.colno + ")" : ""));
+    }, true);
+    window.addEventListener("unhandledrejection", function (e) {
+      report("rejection: " + ((e.reason && e.reason.message) || e.reason));
+    });
+    setTimeout(function () {
+      var boot = document.getElementById("boot");
+      if (!boot) {
+        if (local) report("started fine");
+        return;
+      }
+      report("still on the loading screen after 20s");
+      var box = document.createElement("div");
+      box.className = "stuck";
+      box.innerHTML = "<p>This is taking longer than it should.</p><p>Check your connection, then <a href=''>tap here to reload</a>.</p>";
+      if (problems.length) {
+        var small = document.createElement("small");
+        small.textContent = problems.slice(0, 3).join(" · ");
+        box.appendChild(small);
+      }
+      boot.firstChild.appendChild(box);
+    }, 20000);
+  })();
+</script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<!-- All the wording. Edit it with edit.html (or by hand); keep this file next to index.html. -->
+<script src="invitation-text.js"></script>
+<!-- The invitation, already compiled by tools/build.html (icons built in), so phones start it straight away. -->
+<script>
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const {
+  useState,
+  useEffect,
+  useRef,
+  useMemo,
+  useCallback
+} = React;
+const {
+  createPortal
+} = ReactDOM;
+const ICON_SVG = {
+  "ArrowLeft": "<path d=\"m12 19-7-7 7-7\"></path><path d=\"M19 12H5\"></path>",
+  "ArrowRight": "<path d=\"M5 12h14\"></path><path d=\"m12 5 7 7-7 7\"></path>",
+  "CakeSlice": "<circle cx=\"9\" cy=\"7\" r=\"2\"></circle><path d=\"M7.2 7.9 3 11v9c0 .6.4 1 1 1h16c.6 0 1-.4 1-1v-9c0-2-3-6-7-8l-3.6 2.6\"></path><path d=\"M16 13H3\"></path><path d=\"M16 17H3\"></path>",
+  "Check": "<path d=\"M20 6 9 17l-5-5\"></path>",
+  "Cloud": "<path d=\"M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z\"></path>",
+  "Coffee": "<path d=\"M10 2v2\"></path><path d=\"M14 2v2\"></path><path d=\"M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1\"></path><path d=\"M6 2v2\"></path>",
+  "Croissant": "<path d=\"m4.6 13.11 5.79-3.21c1.89-1.05 4.79 1.78 3.71 3.71l-3.22 5.81C8.8 23.16.79 15.23 4.6 13.11Z\"></path><path d=\"m10.5 9.5-1-2.29C9.2 6.48 8.8 6 8 6H4.5C2.79 6 2 6.5 2 8.5a7.71 7.71 0 0 0 2 4.83\"></path><path d=\"M8 6c0-1.55.24-4-2-4-2 0-2.5 2.17-2.5 4\"></path><path d=\"m14.5 13.5 2.29 1c.73.3 1.21.7 1.21 1.5v3.5c0 1.71-.5 2.5-2.5 2.5a7.71 7.71 0 0 1-4.83-2\"></path><path d=\"M18 16c1.55 0 4-.24 4 2 0 2-2.17 2.5-4 2.5\"></path>",
+  "Cookie": "<path d=\"M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5\"></path><path d=\"M8.5 8.5v.01\"></path><path d=\"M16 15.5v.01\"></path><path d=\"M12 12v.01\"></path><path d=\"M11 17v.01\"></path><path d=\"M7 14v.01\"></path>",
+  "Download": "<path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"></path><polyline points=\"7 10 12 15 17 10\"></polyline><line x1=\"12\" x2=\"12\" y1=\"15\" y2=\"3\"></line>",
+  "Flame": "<path d=\"M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z\"></path>",
+  "GlassWater": "<path d=\"M5.116 4.104A1 1 0 0 1 6.11 3h11.78a1 1 0 0 1 .994 1.105L17.19 20.21A2 2 0 0 1 15.2 22H8.8a2 2 0 0 1-2-1.79z\"></path><path d=\"M6 12a5 5 0 0 1 6 0 5 5 0 0 0 6 0\"></path>",
+  "Heart": "<path d=\"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z\"></path>",
+  "Leaf": "<path d=\"M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z\"></path><path d=\"M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12\"></path>",
+  "Milk": "<path d=\"M8 2h8\"></path><path d=\"M9 2v2.789a4 4 0 0 1-.672 2.219l-.656.984A4 4 0 0 0 7 10.212V20a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-9.789a4 4 0 0 0-.672-2.219l-.656-.984A4 4 0 0 1 15 4.788V2\"></path><path d=\"M7 15a6.472 6.472 0 0 1 5 0 6.47 6.47 0 0 0 5 0\"></path>",
+  "Navigation": "<polygon points=\"3 11 22 2 13 21 11 13 3 11\"></polygon>",
+  "Nut": "<path d=\"M12 4V2\"></path><path d=\"M5 10v4a7.004 7.004 0 0 0 5.277 6.787c.412.104.802.292 1.102.592L12 22l.621-.621c.3-.3.69-.488 1.102-.592A7.003 7.003 0 0 0 19 14v-4\"></path><path d=\"M12 4C8 4 4.5 6 4 8c-.243.97-.919 1.952-2 3 1.31-.082 1.972-.29 3-1 .54.92.982 1.356 2 2 1.452-.647 1.954-1.098 2.5-2 .595.995 1.151 1.427 2.5 2 1.31-.621 1.862-1.058 2.5-2 .629.977 1.162 1.423 2.5 2 1.209-.548 1.68-.967 2-2 1.032.916 1.683 1.157 3 1-1.297-1.036-1.758-2.03-2-3-.5-2-4-4-8-4Z\"></path>",
+  "PenLine": "<path d=\"M12 20h9\"></path><path d=\"M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z\"></path>",
+  "Share2": "<circle cx=\"18\" cy=\"5\" r=\"3\"></circle><circle cx=\"6\" cy=\"12\" r=\"3\"></circle><circle cx=\"18\" cy=\"19\" r=\"3\"></circle><line x1=\"8.59\" x2=\"15.42\" y1=\"13.51\" y2=\"17.49\"></line><line x1=\"15.41\" x2=\"8.59\" y1=\"6.51\" y2=\"10.49\"></line>",
+  "Snowflake": "<line x1=\"2\" x2=\"22\" y1=\"12\" y2=\"12\"></line><line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"22\"></line><path d=\"m20 16-4-4 4-4\"></path><path d=\"m4 8 4 4-4 4\"></path><path d=\"m16 4-4 4-4-4\"></path><path d=\"m8 20 4-4 4 4\"></path>",
+  "Sparkles": "<path d=\"M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z\"></path><path d=\"M20 3v4\"></path><path d=\"M22 5h-4\"></path><path d=\"M4 17v2\"></path><path d=\"M5 18H3\"></path>",
+  "Wheat": "<path d=\"M2 22 16 8\"></path><path d=\"M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z\"></path><path d=\"M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z\"></path><path d=\"M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z\"></path><path d=\"M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z\"></path><path d=\"M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z\"></path><path d=\"M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z\"></path><path d=\"M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z\"></path>",
+  "X": "<path d=\"M18 6 6 18\"></path><path d=\"m6 6 12 12\"></path>"
+};
+function makeIcon(name) {
+  return function Icon(_ref) {
+    let {
+      size = 24,
+      strokeWidth = 2,
+      className = "",
+      ...rest
+    } = _ref;
+    return React.createElement("svg", Object.assign({
+      xmlns: "http://www.w3.org/2000/svg",
+      width: size,
+      height: size,
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth,
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      className,
+      "aria-hidden": "true"
+    }, rest, {
+      dangerouslySetInnerHTML: {
+        __html: ICON_SVG[name]
+      }
+    }));
+  };
+}
+const ArrowLeft = makeIcon("ArrowLeft");
+const ArrowRight = makeIcon("ArrowRight");
+const CakeSlice = makeIcon("CakeSlice");
+const Check = makeIcon("Check");
+const Cloud = makeIcon("Cloud");
+const Coffee = makeIcon("Coffee");
+const Croissant = makeIcon("Croissant");
+const Cookie = makeIcon("Cookie");
+const Download = makeIcon("Download");
+const Flame = makeIcon("Flame");
+const GlassWater = makeIcon("GlassWater");
+const Heart = makeIcon("Heart");
+const Leaf = makeIcon("Leaf");
+const Milk = makeIcon("Milk");
+const Navigation = makeIcon("Navigation");
+const Nut = makeIcon("Nut");
+const PenLine = makeIcon("PenLine");
+const Share2 = makeIcon("Share2");
+const Snowflake = makeIcon("Snowflake");
+const Sparkles = makeIcon("Sparkles");
+const Wheat = makeIcon("Wheat");
+const X = makeIcon("X");
+
+/**
+ * NOD Speciality Coffee × Reem Amr (@agirlwithacupofcoffee)
+ * A private, tailor-made digital invitation — one self-contained React component.
+ *
+ * Stack: React 18 · Tailwind CSS (arbitrary values only — no config needed) · lucide-react
+ * Motion: CSS keyframes + transitions on cubic-bezier(0.16, 1, 0.3, 1)
+ * Extras: Web Audio café ambience (no audio files), canvas-rendered 9:16 story ticket,
+ *         coffee-bean celebration, a shareable photo of the last page.
+ *
+ * Story: Reem was a loyal regular at NOD's first home. That branch has closed, and this invitation
+ * asks her to pour the first cup with us at the new home in the Fifth Settlement.
+ *
+ * All wording lives in DEFAULT_COPY below; in the standalone page, edit.html rewrites it
+ * through invitation-text.js.
+ */
+/* ───────────────────────── Editable text ─────────────────────────
+ * Every word Reem reads lives here. The standalone page overrides these from
+ * invitation-text.js, which edit.html writes. Conventions:
+ *   *stars*      set those words in the accent style (titles only)
+ *   line breaks  "\n" starts a new line; a blank line starts a new letter paragraph
+ *   {name} {date}  filled in where noted
+ */
+const DEFAULT_COPY = {
+  guestFirst: "Reem",
+  guestFull: "Reem Amr",
+  guestHandle: "@agirlwithacupofcoffee",
+  mapsUrl: "https://www.google.com/maps/place/NOD+Speciality+Coffee+Bar/@30.0258,31.4901468,17z/data=!4m6!3m5!1s0x145823007b7b9aeb:0x723303eba5587507!8m2!3d30.0258!4d31.4901468",
+  envelopePill: "Our new home · Invitation No. 001",
+  envelopeTitle: "To the girl who travels the city one cup at a time*…*",
+  envelopeSubtitle: "…and always found her way back to ours.",
+  envelopeBody: "NOD has a new home in the Fifth Settlement. Your seat is the first one we saved.",
+  envelopeHint: "Tap the seal to open",
+  brewPill: "Step 02 · Brew your nod moment",
+  brewTitle: "Your usual, *at our new bar.*",
+  brewBody: "New address, same ritual. Build your order and it’ll be waiting the moment you walk in.",
+  brewButton: "Complete brew",
+  letterPill: "Step 03 · Your invitation",
+  letterBadge: "Golden · VIP",
+  letterEyebrow: "First pour · our new home",
+  letterGreeting: "Dear Reem,",
+  letterBody: "You’ve always been more than a guest to us. You’ve been part of our story.\n\n" + "As we open our new home in the Fifth Settlement, we’d like to welcome you back with a private tasting, signature brews of your choice, and a morning reserved just for you and a plus-one.\n\n" + "You’ve always been part of our family. Your table is waiting.",
+  letterSignoff: "welcome home,",
+  letterSignature: "With a nod, the NOD team",
+  letterOrderLabel: "Waiting at the new bar",
+  letterButton: "RSVP with a nod",
+  invitePill: "Step 04 · You’re invited",
+  inviteLabel: "Invitation No. 001\nfor Reem Amr",
+  inviteHeadline: "Reem,\nyou’re invited",
+  inviteLine: "to coffee & breakfast with a view.",
+  inviteDate: "Saturday, 31 October",
+  inviteDateShort: "Sat 31 Oct",
+  inviteTime: "11:00 AM",
+  inviteVenue: "NOD Speciality Coffee Bar\nFifth Settlement, New Cairo",
+  inviteHandNote: "see you there!",
+  inviteSignoff: "with a nod,",
+  inviteSignature: "the NOD team",
+  stampHint: "your nod\ngoes here",
+  stampText: "Accepted with a nod",
+  acceptButton: "Accept with a nod",
+  welcomeBack: "Welcome back, {name}. See you {date}.",
+  storyButton: "Share as a story",
+  storyHint: "Yours to keep, or to share.",
+  shareButton: "Save as a photo",
+  footerTagline: "You taste it. You nod."
+};
+
+// Live text: defaults, then whatever invitation-text.js set. The preview in edit.html updates it in place.
+const COPY = {
+  ...DEFAULT_COPY,
+  ...(typeof window !== "undefined" && window.NOD_COPY ? window.NOD_COPY : {})
+};
+const fill = (template, vars) => String(template).replace(/\{(\w+)\}/g, (m, k) => k in vars ? vars[k] : m);
+const splitLines = text => String(text).split("\n");
+
+// Renders *starred* words with the given class.
+function Emph(_ref2) {
+  let {
+    text,
+    className = ""
+  } = _ref2;
+  return String(text).split(/\*([^*]+)\*/).map((part, i) => i % 2 ? /*#__PURE__*/React.createElement("em", {
+    key: i,
+    className: className
+  }, part) : part);
+}
+function Lines(_ref3) {
+  let {
+    text
+  } = _ref3;
+  return splitLines(text).map((line, i) => /*#__PURE__*/React.createElement(React.Fragment, {
+    key: i
+  }, i > 0 && /*#__PURE__*/React.createElement("br", null), line));
+}
+const GUEST = {
+  get first() {
+    return COPY.guestFirst;
+  },
+  get full() {
+    return COPY.guestFull;
+  },
+  get handle() {
+    return COPY.guestHandle;
+  }
+};
+
+// The new home. Pin from NOD's Google Maps listing (checked Oct 2026).
+const VENUE = {
+  name: "NOD Speciality Coffee Bar",
+  handle: "@nodcoffee.eg",
+  area: "New Cairo",
+  district: "Fifth Settlement",
+  get tagline() {
+    return COPY.footerTagline;
+  },
+  get mapsUrl() {
+    return COPY.mapsUrl;
+  }
+};
+const BRAND_GOLD = "#C49430"; // from the official logo file
+
+/* ───────────────────────── Menu data ───────────────────────── */
+
+const BASES = [{
+  id: "espresso",
+  name: "Colombian Single Origin Espresso",
+  display: "Colombian Espresso",
+  short: "Espresso",
+  code: "esp",
+  desc: "Bright & syrupy, pulled short",
+  icon: Coffee,
+  iced: false,
+  notes: ["wild berries", "panela sugar", "cacao nib"],
+  profile: {
+    body: 3,
+    sweet: 2,
+    acid: 5,
+    intensity: 5
+  }
+}, {
+  id: "flatwhite",
+  name: "Flat White",
+  display: "Flat White",
+  short: "Flat White",
+  code: "fw",
+  desc: "Double espresso, silk-thin microfoam",
+  tag: "your fav.",
+  icon: Heart,
+  iced: false,
+  notes: ["hazelnut", "milk chocolate", "caramel body"],
+  profile: {
+    body: 4,
+    sweet: 3,
+    acid: 2,
+    intensity: 4
+  }
+}, {
+  id: "spanish",
+  name: "Signature Iced Spanish Latte",
+  display: "Iced Spanish Latte",
+  short: "Spanish Latte",
+  code: "spl",
+  desc: "Condensed milk, slow-poured shot",
+  icon: GlassWater,
+  iced: true,
+  notes: ["toasted caramel", "dulce de leche", "dark cocoa"],
+  profile: {
+    body: 4,
+    sweet: 5,
+    acid: 1,
+    intensity: 3
+  }
+}, {
+  id: "matcha",
+  name: "Ceremonial Matcha",
+  display: "Ceremonial Matcha",
+  short: "Matcha",
+  code: "mch",
+  desc: "Stone-ground, whisked to order",
+  icon: Leaf,
+  iced: false,
+  notes: ["sweet umami", "fresh-cut grass", "a white-chocolate finish"],
+  profile: {
+    body: 3,
+    sweet: 2,
+    acid: 1,
+    intensity: 3
+  }
+}];
+const MILKS = [{
+  id: "oat",
+  name: "Oat Milk",
+  short: "Oat",
+  code: "oat",
+  desc: "Creamy, naturally sweet",
+  tag: "your fav.",
+  icon: Wheat,
+  suffix: "with oat milk",
+  note: "rounded with oat-cereal sweetness",
+  mod: {
+    body: 1,
+    sweet: 1,
+    acid: -1
+  }
+}, {
+  id: "almond",
+  name: "Almond Milk",
+  short: "Almond",
+  code: "alm",
+  desc: "Light, nutty & smooth",
+  icon: Nut,
+  suffix: "with almond milk",
+  note: "finished light and nutty",
+  mod: {
+    sweet: 1,
+    acid: -1
+  }
+}, {
+  id: "whole",
+  name: "Whole Milk",
+  short: "Whole",
+  code: "whole",
+  desc: "Classic & silky",
+  icon: Milk,
+  suffix: "with whole milk",
+  note: "wrapped in silky, classic dairy",
+  mod: {
+    body: 1,
+    acid: -1
+  }
+}, {
+  id: "coldfoam",
+  name: "Cold Foam",
+  short: "Cold foam",
+  code: "cf",
+  desc: "Cloud-soft cap, served cold",
+  icon: Cloud,
+  iced: true,
+  suffix: "with cold foam",
+  note: "under a cloud-soft cold foam cap",
+  mod: {
+    sweet: 1,
+    intensity: -1
+  }
+}, {
+  id: "extrahot",
+  name: "Extra Hot",
+  short: "Extra hot",
+  code: "xhot",
+  desc: "Steamed hotter, lingers longer",
+  icon: Flame,
+  suffix: "served extra hot",
+  note: "steamed hotter for a lingering aroma",
+  mod: {
+    intensity: 1
+  }
+}, {
+  id: "ice",
+  name: "Over Artisanal Clear Ice",
+  short: "Clear ice",
+  code: "ice",
+  desc: "Hand-cut, slow-melt clear ice",
+  icon: Snowflake,
+  iced: true,
+  suffix: "over clear ice",
+  note: "chilled crisp over slow-melt clear ice",
+  mod: {
+    body: -1,
+    acid: 1
+  }
+}];
+const PAIRINGS = [{
+  id: "croissant",
+  name: "Warm Almond Croissant",
+  short: "Croissant",
+  desc: "Frangipane, toasted almond flakes",
+  icon: Croissant,
+  note: "frangipane echoes the nutty finish"
+}, {
+  id: "painsuisse",
+  name: "Pain Suisse",
+  short: "Pain Suisse",
+  desc: "Vanilla custard & dark chocolate chips",
+  icon: Cookie,
+  note: "vanilla custard softens the espresso"
+}, {
+  id: "tiramisu",
+  name: "Tiramisù",
+  short: "Tiramisù",
+  desc: "100% Italian mascarpone",
+  tag: "our one & only",
+  icon: CakeSlice,
+  note: "mascarpone and cocoa meet the espresso"
+}];
+const GROUPS = [{
+  key: "base",
+  letter: "A",
+  label: "Base",
+  title: "Choose your base",
+  items: BASES
+}, {
+  key: "milk",
+  letter: "B",
+  label: "Milk",
+  title: "Milk & temperature",
+  items: MILKS
+}, {
+  key: "pairing",
+  letter: "C",
+  label: "Pairing",
+  title: "Choose your pairing",
+  items: PAIRINGS
+}];
+const PROFILE_KEYS = [["body", "Body"], ["sweet", "Sweet"], ["acid", "Acidity"], ["intensity", "Intensity"]];
+const STEPS = ["Unseal", "Brew", "Letter", "RSVP"];
+const DEFAULT_ORDER = {
+  base: "flatwhite",
+  milk: "oat",
+  pairing: "tiramisu"
+};
+
+/* ───────────────────────── Official NOD marks ───────────────────────── */
+
+// Traced from the brand PDFs. Each part is [x, y, path] in PDF space (y up),
+// so draw them inside MARK_FLIP, each translated by its own offset.
+const MARK_FLIP = "matrix(1 0 0 -1 0 850.32)";
+const NOD_WORDMARK = [[420.5983, 546.8939, "M0 0 C-8.071 -0.103 -16.492 -0.817 -24.772 -2.781 C-41.698 -6.797 -56.061 -15.086 -67.259 -28.525 C-75.442 -38.346 -80.572 -49.707 -83.704 -62.026 C-86.421 -72.715 -87.303 -83.588 -87.059 -94.589 C-86.801 -106.254 -85.035 -117.654 -81.194 -128.69 C-73.456 -150.921 -59.033 -167.073 -37.374 -176.557 C-27.387 -180.93 -16.841 -183.155 -6.021 -183.821 C5.25 -184.515 16.498 -184.153 27.589 -181.598 C42.833 -178.088 56.21 -171.175 67.202 -159.943 C77.055 -149.873 83.23 -137.727 86.949 -124.248 C90.166 -112.591 91.168 -100.693 90.82 -88.641 C90.507 -77.792 88.882 -67.162 85.455 -56.856 C77.553 -33.097 62.203 -16.187 38.883 -6.785 C26.562 -1.818 13.611 -0.155 0 0 M3.761 -189.058 C-9.602 -189.172 -22.094 -187.665 -34.132 -183.466 C-60.119 -174.401 -77.607 -156.753 -86.752 -130.821 C-89.985 -121.654 -91.805 -112.197 -92.583 -102.512 C-93.224 -94.52 -93.244 -86.538 -92.487 -78.566 C-90.74 -60.143 -85.242 -43.04 -73.884 -28.208 C-61.583 -12.146 -45.235 -2.319 -25.608 2.205 C-16.213 4.371 -6.671 5.218 2.941 4.977 C16.763 4.629 30.323 2.636 43.171 -2.758 C65.493 -12.131 81.008 -28.145 89.603 -50.811 C93.455 -60.969 95.646 -71.482 96.424 -82.31 C97.45 -96.602 96.703 -110.746 92.882 -124.62 C88.801 -139.439 81.92 -152.724 70.99 -163.71 C59.219 -175.541 45.028 -182.949 28.795 -186.544 C20.339 -188.417 11.768 -189.214 3.761 -189.058"], [171.7736, 358.0709, "M0 0 L-4.61 0 C-5.173 2.021 -5.055 185.694 -4.461 188.148 C-3.208 188.148 -1.85 188.295 -0.549 188.087 C0.114 187.981 0.821 187.346 1.256 186.763 C2.927 184.519 4.499 182.202 6.103 179.909 C45.332 123.822 84.56 67.734 123.792 11.649 C124.319 10.895 124.904 10.182 125.462 9.449 C125.643 9.495 125.824 9.541 126.004 9.586 C126.058 10.408 126.155 11.231 126.157 12.053 C126.169 19.571 126.165 27.088 126.165 34.606 C126.165 84.591 126.164 134.576 126.17 184.561 C126.17 185.657 126.262 186.753 126.317 188.002 L131.025 188.002 C131.095 186.794 131.221 185.634 131.221 184.474 C131.231 143.846 131.229 103.218 131.229 62.59 C131.229 42.916 131.229 23.242 131.229 3.568 C131.229 2.466 131.229 1.365 131.229 -0.084 C129.529 -0.101 128.093 -0.299 126.736 -0.053 C126.023 0.076 125.312 0.882 124.837 1.551 C120.625 7.484 116.465 13.455 112.291 19.414 C75.822 71.479 39.353 123.545 2.879 175.607 C2.261 176.489 1.587 177.332 0.939 178.193 C0.742 178.14 0.546 178.087 0.349 178.034 C0.274 177.056 0.135 176.079 0.133 175.1 C0.107 160.225 0.095 145.35 0.085 130.474 C0.056 88.087 0.028 45.699 0 3.312 C-0.001 2.292 0 1.273 0 0"], [545.3652, 362.9214, "M0 0 C1.067 -0.119 1.992 -0.315 2.917 -0.31 C19.223 -0.233 35.532 -0.253 51.835 0.014 C61.379 0.17 70.777 1.753 79.821 4.84 C102.024 12.42 117.944 26.726 126.387 48.912 C131.074 61.228 133.201 74.023 133.391 87.13 C133.473 92.865 133.062 98.625 132.571 104.348 C131.662 114.934 128.935 125.091 124.752 134.855 C119.493 147.127 111.682 157.314 100.405 164.685 C93.175 169.41 85.287 172.633 77.009 174.921 C68.019 177.407 58.787 178.203 49.507 178.266 C33.998 178.371 18.487 178.298 2.977 178.3 C2.578 178.3 2.177 178.314 1.778 178.288 C0.201 178.186 0.003 177.997 -0.121 176.462 C-0.153 176.065 -0.137 175.663 -0.137 175.263 C-0.138 117.781 -0.139 60.299 -0.134 2.816 C-0.134 1.951 -0.054 1.085 0 0 M-4.81 183.32 C-3.951 183.32 -3.167 183.32 -2.383 183.32 C15.609 183.316 33.601 183.437 51.591 183.266 C63.96 183.149 76.087 181.297 87.772 177.006 C107.92 169.606 121.9 155.922 129.915 136.025 C133.945 126.022 136.511 115.694 137.626 104.976 C138.281 98.686 138.649 92.386 138.436 86.068 C137.946 71.584 135.551 57.47 129.886 44.038 C120.292 21.29 103.302 6.757 79.975 -0.626 C73.26 -2.752 66.352 -4.089 59.313 -4.553 C53.577 -4.93 47.83 -5.331 42.086 -5.376 C27.374 -5.492 12.66 -5.415 -2.053 -5.415 C-2.921 -5.415 -3.788 -5.415 -4.434 -5.415 C-4.713 -5.149 -4.775 -5.097 -4.828 -5.038 C-4.88 -4.98 -4.954 -4.92 -4.966 -4.851 C-5.037 -4.462 -5.145 -4.07 -5.145 -3.68 C-5.144 58.29 -5.135 120.26 -5.117 182.23 C-5.117 182.455 -4.995 182.68 -4.81 183.32"], [384.3353, 570.3685, "M0 0 C0.551 0.739 0.929 1.322 1.381 1.841 C9.579 11.232 19.768 16.675 32.298 17.7 C42.645 18.546 52.508 17.007 61.811 12.317 C67.089 9.656 71.539 5.919 75.453 1.521 C75.717 1.223 75.963 0.907 76.197 0.584 C76.286 0.46 76.317 0.294 76.448 -0.039 C74.513 -0.434 72.865 -0.555 71.276 1.071 C62.238 10.313 51.068 14.402 38.279 14.596 C32.88 14.678 27.593 14.13 22.453 12.458 C15.785 10.288 10.028 6.617 5.254 1.502 C3.833 -0.02 2.398 -0.675 0 0"]];
+const NOD_EMBLEM = [[428.5824, 400.4262, "M0 0 C49.09 0 98.18 0 147.27 0 C147.829 0 148.391 -0.024 148.948 0.014 C150.908 0.147 151.485 0.985 150.876 2.871 C148.965 8.793 146.758 14.596 144.063 20.214 C137.966 32.921 130.082 44.375 120.358 54.587 C107.531 68.058 92.634 78.625 75.856 86.587 C67.549 90.529 59.036 93.937 50.119 96.24 C45.259 97.495 40.376 98.667 35.484 99.79 C33.157 100.324 30.793 100.712 28.43 101.065 C23.694 101.772 18.966 102.726 14.201 103.004 C6.708 103.443 -0.815 103.353 -8.322 103.596 C-11.93 103.712 -14.924 102.574 -17.837 100.426 C-30.055 91.42 -42.381 82.562 -54.688 73.678 C-72.508 60.814 -90.351 47.98 -108.175 35.12 C-121.981 25.159 -135.774 15.179 -149.567 5.2 C-150.146 4.782 -150.768 4.364 -151.2 3.812 C-152.387 2.299 -151.767 0.538 -149.893 0.17 C-148.887 -0.028 -147.826 0.007 -146.79 0.007 C-97.86 0 -48.93 0.001 0 0 M-3.528 -7.792 C-47.423 -7.792 -91.318 -7.792 -135.213 -7.792 C-142.649 -7.792 -150.085 -7.781 -157.521 -7.803 C-160.007 -7.81 -160.342 -7.943 -160.829 -10.324 C-161.593 -14.072 -162.451 -17.851 -162.664 -21.65 C-163.242 -32.016 -163.599 -42.378 -161.914 -52.73 C-160.978 -58.487 -159.838 -64.158 -158.279 -69.774 C-156.374 -76.638 -153.827 -83.24 -150.766 -89.653 C-145.187 -101.343 -138 -111.969 -129.295 -121.544 C-122.882 -128.597 -115.826 -134.948 -108.124 -140.606 C-97.767 -148.215 -86.636 -154.416 -74.801 -159.36 C-66.617 -162.778 -58.158 -165.405 -49.563 -167.58 C-47.474 -168.109 -45.376 -168.622 -43.257 -169.001 C-39.884 -169.604 -36.498 -170.153 -33.102 -170.607 C-28.044 -171.283 -22.986 -172.169 -17.902 -172.403 C-9.843 -172.772 -1.763 -172.735 6.309 -172.745 C9.098 -172.749 11.898 -172.479 14.674 -172.162 C18.951 -171.673 23.215 -171.071 27.476 -170.45 C30.866 -169.956 34.303 -169.601 37.612 -168.762 C44.179 -167.098 50.692 -165.211 57.191 -163.291 C63.789 -161.341 70.103 -158.618 76.296 -155.657 C85.906 -151.062 94.934 -145.484 103.434 -139.053 C111.115 -133.241 118.115 -126.681 124.412 -119.422 C132.085 -110.577 138.654 -100.938 143.616 -90.303 C145.973 -85.252 148.191 -80.099 149.954 -74.819 C151.639 -69.775 152.72 -64.523 153.943 -59.333 C155.191 -54.043 156.043 -48.681 156.061 -43.225 C156.08 -37.076 156.215 -30.92 155.976 -24.779 C155.816 -20.647 155.357 -16.484 154.555 -12.429 C153.58 -7.497 153.717 -7.815 149.026 -7.793 C148.866 -7.792 148.706 -7.793 148.546 -7.793 C97.855 -7.793 47.163 -7.793 -3.528 -7.792 M-93.3 239.744 L-90.208 239.744 C-25.831 239.744 38.545 239.744 102.921 239.745 C120.355 239.745 137.788 239.744 155.222 239.743 C155.542 239.743 155.862 239.75 156.182 239.745 C158.485 239.711 158.581 239.631 158.602 237.273 C158.624 234.794 158.539 232.312 158.634 229.836 C158.695 228.246 158.185 227.319 156.772 226.374 C152.391 223.444 148.2 220.23 143.923 217.144 C131.669 208.305 119.402 199.486 107.155 190.639 C87.065 176.128 66.985 161.605 46.905 147.08 C36.412 139.49 25.924 131.894 15.45 124.276 C14.267 123.415 12.687 122.936 12.083 120.945 C12.827 120.706 13.5 120.373 14.205 120.282 C21.17 119.379 28.193 118.802 35.097 117.564 C42.383 116.257 49.558 114.369 56.647 112.142 C69.97 107.956 82.616 102.317 94.558 95.105 C109.61 86.014 122.734 74.685 133.975 61.147 C143.028 50.245 150.285 38.263 155.865 25.266 C158.508 19.112 160.797 12.812 162.413 6.296 C163.546 1.732 164.832 -2.812 165.622 -7.437 C166.455 -12.308 166.818 -17.261 167.314 -22.186 C167.658 -25.603 168.039 -29.029 168.111 -32.458 C168.184 -35.965 167.962 -39.483 167.754 -42.989 C167.565 -46.178 167.325 -49.372 166.919 -52.539 C166.443 -56.256 165.812 -59.955 165.158 -63.645 C164.657 -66.47 164.105 -69.292 163.412 -72.074 C162.623 -75.244 161.78 -78.412 160.736 -81.505 C158.515 -88.081 155.999 -94.539 152.969 -100.802 C147.58 -111.941 140.859 -122.187 132.918 -131.667 C123.188 -143.283 111.876 -153.1 99.238 -161.396 C89.864 -167.549 79.985 -172.788 69.465 -176.711 C62.967 -179.134 56.411 -181.435 49.779 -183.459 C45.676 -184.712 41.39 -185.368 37.175 -186.242 C33.974 -186.905 30.757 -187.487 27.547 -188.106 C27.154 -188.181 26.767 -188.303 26.371 -188.339 C21.523 -188.782 16.68 -189.293 11.824 -189.625 C7.041 -189.951 2.246 -190.223 -2.546 -190.274 C-6.696 -190.319 -10.851 -190.03 -15.003 -189.873 C-16.52 -189.816 -18.038 -189.752 -19.551 -189.625 C-21.934 -189.424 -24.32 -189.219 -26.693 -188.923 C-30.968 -188.39 -35.24 -187.826 -39.501 -187.2 C-41.944 -186.841 -44.4 -186.473 -46.788 -185.867 C-52.738 -184.356 -58.719 -182.914 -64.566 -181.062 C-72.024 -178.699 -79.283 -175.771 -86.36 -172.404 C-97.665 -167.025 -108.283 -160.543 -118.059 -152.722 C-127.774 -144.949 -136.464 -136.168 -144.05 -126.275 C-151.579 -116.454 -157.788 -105.88 -162.655 -94.524 C-165.294 -88.368 -167.586 -82.069 -169.207 -75.556 C-170.343 -70.992 -171.589 -66.441 -172.392 -61.815 C-173.209 -57.104 -173.559 -52.31 -174.082 -47.549 C-174.325 -45.326 -174.474 -43.092 -174.698 -40.867 C-175.393 -33.975 -174.612 -27.137 -173.955 -20.297 C-173.566 -16.245 -173.319 -12.153 -172.528 -8.175 C-171.709 -4.054 -171.242 0.176 -169.353 4.072 C-168.634 5.555 -167.614 6.494 -166.387 7.372 C-158.847 12.77 -151.279 18.129 -143.761 23.558 C-126.2 36.24 -108.673 48.968 -91.111 61.65 C-73.871 74.099 -56.595 86.5 -39.353 98.948 C-26.908 107.934 -14.503 116.976 -2.061 125.965 C15.373 138.562 32.82 151.139 50.27 163.713 C61.296 171.657 72.351 179.561 83.368 187.516 C100.672 200.01 117.955 212.532 135.247 225.042 C136.607 226.026 137.978 226.996 139.325 227.998 C140.297 228.721 140.836 229.675 140.513 230.912 C140.164 232.245 139.059 232.495 137.891 232.562 C137.173 232.603 136.452 232.594 135.732 232.594 C61.28 232.595 -13.173 232.595 -87.626 232.591 C-88.744 232.591 -89.864 232.559 -90.982 232.5 C-92.067 232.443 -92.58 232.882 -92.663 234.005 C-92.791 235.739 -93.039 237.464 -93.3 239.744"]];
+function MarkPaths(_ref4) {
+  let {
+    parts
+  } = _ref4;
+  return parts.map(_ref5 => {
+    let [tx, ty, d] = _ref5;
+    return /*#__PURE__*/React.createElement("path", {
+      key: `${tx}-${ty}`,
+      transform: `translate(${tx} ${ty})`,
+      d: d
+    });
+  });
+}
+function NodWordmark(_ref6) {
+  let {
+    className = ""
+  } = _ref6;
+  return /*#__PURE__*/React.createElement("svg", {
+    viewBox: "164 258 523 238",
+    className: className,
+    role: "img",
+    "aria-label": "NOD"
+  }, /*#__PURE__*/React.createElement("g", {
+    transform: MARK_FLIP,
+    fill: "currentColor"
+  }, /*#__PURE__*/React.createElement(MarkPaths, {
+    parts: NOD_WORDMARK
+  })));
+}
+
+// The emblem centred on (x, y) at a given height, for use inside another SVG.
+function EmblemAt(_ref7) {
+  let {
+    x,
+    y,
+    height,
+    ...rest
+  } = _ref7;
+  const s = height / 434;
+  return /*#__PURE__*/React.createElement("g", _extends({
+    transform: `translate(${x} ${y}) scale(${s}) translate(-425.3 -425.2)`
+  }, rest), /*#__PURE__*/React.createElement("g", {
+    transform: MARK_FLIP
+  }, /*#__PURE__*/React.createElement(MarkPaths, {
+    parts: NOD_EMBLEM
+  })));
+}
+
+/* ───────────────────────── Shared styles ───────────────────────── */
+
+const FOCUS = "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C49A6C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAF7F2]";
+const PILL = "inline-flex items-center gap-2 rounded-full border border-[#E8DFD8] bg-white/60 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.25em] text-[#8C6239] backdrop-blur-sm";
+const BTN_PRIMARY = `relative inline-flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-full bg-[#1E1915] px-6 py-4 text-[12px] font-medium uppercase tracking-[0.24em] text-[#FAF7F2] shadow-[0_18px_40px_-20px_rgba(30,25,21,0.9)] transition duration-300 hover:bg-[#2C221E] active:scale-[0.985] ${FOCUS}`;
+const BTN_GHOST = `inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-[#E8DFD8] bg-white/70 px-6 py-3.5 text-[12px] font-medium uppercase tracking-[0.22em] text-[#1E1915] transition duration-300 hover:border-[#C49A6C] active:scale-[0.985] ${FOCUS}`;
+const BTN_SMALL = `inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#E8DFD8] bg-white/70 px-3 py-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[#1E1915] transition duration-300 hover:border-[#C49A6C] active:scale-[0.985] ${FOCUS}`;
+const LINK = `inline-flex items-center gap-1.5 rounded-sm font-medium text-[#1E1915] underline decoration-[#C49A6C] decoration-wavy decoration-1 underline-offset-[6px] transition hover:decoration-[#8C6239] ${FOCUS}`;
+const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
+const CSS = `
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Courier+Prime:wght@400;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+.nod-root { font-family: 'Inter', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+.font-serif-nod { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; }
+.font-hand { font-family: 'Caveat', 'Segoe Script', cursive; }
+.font-type { font-family: 'Courier Prime', 'Courier New', monospace; }
+.nod-paper { background-color: #FFFDF9; background-image: radial-gradient(circle, rgba(140,98,57,.16) 1px, transparent 1.3px); background-size: 18px 18px; }
+.nod-draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: nodDraw 1.1s cubic-bezier(0.45, 0, 0.25, 1) both; }
+.nod-write { animation: nodWrite 1.4s ease-out both; }
+.nod-caret { animation: nodCaret 1s steps(1) infinite; }
+.nod-stamp-in { animation: nodStamp .6s cubic-bezier(0.2, 0.9, 0.3, 1.15) both; }
+@keyframes nodDraw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes nodWrite { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes nodCaret { 50% { opacity: 0; } }
+@keyframes nodStamp { from { opacity: 0; transform: rotate(-12deg) scale(1.9); filter: blur(3px); } 60% { opacity: .95; } to { opacity: .92; transform: rotate(-12deg) scale(1); filter: none; } }
+.nod-grain::before { content: ''; position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: .07; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+.nod-ease { transition-timing-function: ${EASE}; }
+.nod-screen { animation: nodScreenIn .9s ${EASE} backwards; }
+.nod-rise { animation: nodRise .8s ${EASE} both; }
+.nod-fade { animation: nodFade .5s ease both; }
+.nod-sheet { animation: nodSheetUp .6s ${EASE} both; }
+.nod-unfold { transform-origin: 50% 0%; animation: nodUnfold 1.4s ${EASE} both; }
+.nod-crease { animation: nodCrease 1.8s ease .5s both; }
+.nod-foil { background: linear-gradient(100deg, #8C6239 0%, #C49A6C 28%, #F4DFBC 46%, #C49A6C 62%, #8C6239 100%); background-size: 300% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent; animation: nodFoil 6s linear infinite; }
+.nod-steam { transform-box: fill-box; transform-origin: 50% 100%; animation: nodSteam 3.4s ease-out infinite; }
+.nod-ice { transform-box: fill-box; transform-origin: center; animation: nodBob 4.5s ease-in-out infinite; }
+.nod-pin-pulse { transform-box: fill-box; transform-origin: center; animation: nodPin 2.4s ease-out infinite; }
+.nod-blink { animation: nodBlink 1.8s ease-in-out infinite; }
+.nod-brewing { animation: nodFill 1.1s ${EASE} both; }
+.nod-scroll { scrollbar-width: none; } .nod-scroll::-webkit-scrollbar { display: none; }
+@keyframes nodScreenIn { from { opacity: 0; transform: translateY(18px) scale(.985); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes nodRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes nodFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes nodSheetUp { from { transform: translateY(105%); } to { transform: none; } }
+@keyframes nodUnfold { 0% { opacity: 0; transform: perspective(1400px) rotateX(-78deg) translateY(-12px); } 35% { opacity: 1; } 100% { opacity: 1; transform: perspective(1400px) rotateX(0deg); } }
+@keyframes nodCrease { from { opacity: 1; } to { opacity: .35; } }
+@keyframes nodFoil { from { background-position: 200% 50%; } to { background-position: -100% 50%; } }
+@keyframes nodSteam { 0% { opacity: 0; transform: translateY(6px) scaleX(1); } 25% { opacity: .6; } 100% { opacity: 0; transform: translateY(-22px) scaleX(1.5); } }
+@keyframes nodBob { 0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); } 50% { transform: translateY(-2.5px) rotate(calc(var(--r, 0deg) + 4deg)); } }
+@keyframes nodPin { 0% { opacity: .7; transform: scale(.6); } 100% { opacity: 0; transform: scale(2.6); } }
+@keyframes nodBlink { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+@keyframes nodWave { 0%, 100% { transform: scaleY(.3); } 50% { transform: scaleY(1); } }
+@keyframes nodFill { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@media (prefers-reduced-motion: reduce) {
+  .nod-root *, .nod-root *::before, .nod-root *::after { animation-duration: .01ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+`;
+
+/* ───────────────────────── Drink logic ───────────────────────── */
+
+const INK = {
+  coffee: "#3A2418",
+  crema: "#C08F5E",
+  microfoam: "#EEE2D2",
+  flatWhite: "#A3724A",
+  flatWhiteOat: "#AD8058",
+  cortado: "#8C5D3B",
+  matcha: "#7D9A44",
+  matchaLatte: "#A9BC72",
+  matchaFoam: "#DFE6C4",
+  condensed: "#E4C793",
+  coldFoam: "#FBF8F3",
+  caramelLatte: "#B48457"
+};
+
+// Glass interior spans y=62 (just under the rim) to y=218 (top of the thick base).
+const GLASS_TOP = 62;
+const GLASS_BOTTOM = 218;
+const glassHalfWidth = y => 65 - 16 * (y - 50) / 168;
+function buildVisual(baseId, milkId, iced) {
+  const milkTone = milkId === "oat" ? "#E7D6BD" : milkId === "almond" ? "#EDE2CF" : "#F3ECE2";
+  const foam = milkId === "coldfoam" ? [["foam", INK.coldFoam, 22]] : [];
+  let level;
+  let layers;
+  switch (baseId) {
+    case "espresso":
+      if (iced) {
+        level = 0.5;
+        layers = [...foam, ["upper", INK.coffee]];
+      } else if (milkId === "extrahot") {
+        level = 0.34;
+        layers = [["foam", INK.crema, 7], ["upper", INK.coffee]];
+      } else {
+        level = 0.46;
+        layers = [["foam", INK.microfoam, 8], ["upper", INK.cortado]];
+      }
+      break;
+    case "spanish":
+      if (iced) {
+        level = 0.88;
+        layers = [...foam, ["upper", INK.coffee, 30], ["middle", milkTone], ["lower", INK.condensed, 30, true]];
+      } else {
+        level = 0.74;
+        layers = [["foam", INK.microfoam, 10], ["upper", INK.caramelLatte], ["lower", INK.condensed, 18, true]];
+      }
+      break;
+    case "matcha":
+      if (iced) {
+        level = 0.84;
+        layers = [...foam, ["upper", INK.matcha, 34], ["middle", milkTone]];
+      } else {
+        level = 0.72;
+        layers = [["foam", INK.matchaFoam, 10], ["upper", INK.matchaLatte]];
+      }
+      break;
+    default:
+      if (iced) {
+        level = 0.8;
+        layers = [...foam, ["upper", INK.coffee, 26], ["middle", milkTone]];
+      } else {
+        level = 0.72;
+        layers = [["foam", INK.microfoam, 10], ["upper", milkId === "oat" || milkId === "almond" ? INK.flatWhiteOat : INK.flatWhite]];
+      }
+  }
+  const surface = GLASS_BOTTOM - level * (GLASS_BOTTOM - GLASS_TOP);
+  // Fixed slots so every layer animates between states instead of popping.
+  const slots = {
+    foam: {
+      top: 262,
+      color: INK.microfoam
+    },
+    upper: {
+      top: 262,
+      color: INK.coffee
+    },
+    middle: {
+      top: 262,
+      color: milkTone
+    },
+    lower: {
+      top: 262,
+      color: INK.condensed
+    }
+  };
+  let y = surface;
+  layers.forEach(_ref8 => {
+    let [slot, color, h, fromBottom] = _ref8;
+    if (fromBottom) slots[slot] = {
+      top: GLASS_BOTTOM - h,
+      color
+    };else {
+      slots[slot] = {
+        top: y,
+        color
+      };
+      y += h || 0;
+    }
+  });
+  return {
+    slots,
+    surface,
+    surfaceColor: layers[0][1],
+    foamDepth: milkId === "coldfoam" ? 22 : 0
+  };
+}
+function composeDrink(_ref9) {
+  let {
+    base: baseId,
+    milk: milkId,
+    pairing: pairingId
+  } = _ref9;
+  const base = BASES.find(b => b.id === baseId) || BASES[1];
+  const milk = MILKS.find(m => m.id === milkId) || MILKS[0];
+  const pairing = PAIRINGS.find(p => p.id === pairingId) || PAIRINGS[0];
+  const iced = milk.id === "extrahot" ? false : Boolean(milk.iced || base.iced);
+  let name = base.display;
+  if (base.id === "spanish" && !iced) name = "Spanish Latte";
+  if (iced && base.id === "flatwhite") name = "Iced Flat White";
+  if (iced && base.id === "matcha") name = "Iced Ceremonial Matcha";
+  const profile = {};
+  PROFILE_KEYS.forEach(_ref10 => {
+    let [k] = _ref10;
+    profile[k] = Math.max(1, Math.min(5, base.profile[k] + (milk.mod[k] || 0)));
+  });
+  const [a, b, c] = base.notes;
+  return {
+    base,
+    milk,
+    pairing,
+    iced,
+    extraHot: milk.id === "extrahot",
+    name,
+    title: `${name} ${milk.suffix}`,
+    notesLine: `Notes of ${a}, ${b} & ${c} — ${milk.note}.`,
+    profile,
+    sticker: `${base.code} · ${milk.code}`,
+    visual: buildVisual(base.id, milk.id, iced)
+  };
+}
+
+/* ───────────────────────── Café ambience (Web Audio, no files) ───────────────────────── */
+
+function createAmbience() {
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if (!AC) throw new Error("Web Audio unavailable");
+  const ctx = new AC();
+  const sr = ctx.sampleRate;
+  const gain = v => {
+    const g = ctx.createGain();
+    g.gain.value = v;
+    return g;
+  };
+  const filter = (type, freq, q) => {
+    const f = ctx.createBiquadFilter();
+    f.type = type;
+    f.frequency.value = freq;
+    if (q) f.Q.value = q;
+    return f;
+  };
+  const chain = function () {
+    for (var _len = arguments.length, nodes = new Array(_len), _key = 0; _key < _len; _key++) {
+      nodes[_key] = arguments[_key];
+    }
+    return nodes.reduce((a, b) => (a.connect(b), b));
+  };
+  const master = gain(0);
+  chain(master, filter("lowpass", 3200), ctx.destination);
+  const buffer = (seconds, fill) => {
+    const b = ctx.createBuffer(1, Math.floor(sr * seconds), sr);
+    fill(b.getChannelData(0));
+    return b;
+  };
+  const loop = function (buf) {
+    const src = ctx.createBufferSource();
+    src.buffer = buf;
+    src.loop = true;
+    for (var _len2 = arguments.length, nodes = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+      nodes[_key2 - 1] = arguments[_key2];
+    }
+    chain(src, ...nodes, master);
+    src.start();
+  };
+
+  // Room tone — warm brown noise.
+  loop(buffer(6, d => {
+    let last = 0;
+    for (let i = 0; i < d.length; i++) {
+      last = (last + 0.02 * (Math.random() * 2 - 1)) / 1.02;
+      d[i] = last * 3.2;
+    }
+  }), filter("lowpass", 420), gain(0.22));
+
+  // Distant murmur — band-passed noise breathing on a slow LFO.
+  const murmur = gain(0.035);
+  loop(buffer(5, d => {
+    for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+  }), filter("bandpass", 650, 0.7), murmur);
+  const breathe = ctx.createOscillator();
+  breathe.frequency.value = 0.13;
+  chain(breathe, gain(0.02), murmur.gain);
+  breathe.start();
+
+  // Vinyl crackle.
+  loop(buffer(4, d => {
+    for (let i = 0; i < d.length; i++) {
+      d[i] = Math.random() < 0.0006 ? (Math.random() * 2 - 1) * (0.4 + Math.random() * 0.6) : (Math.random() * 2 - 1) * 0.004;
+    }
+  }), filter("highpass", 1800), gain(0.16));
+
+  // Lo-fi keys bus with tremolo and tape wow.
+  const keys = gain(0.9);
+  const trem = gain(1);
+  chain(keys, filter("lowpass", 1500), trem, master);
+  const tremLfo = ctx.createOscillator();
+  tremLfo.frequency.value = 4.2;
+  chain(tremLfo, gain(0.12), trem.gain);
+  tremLfo.start();
+  const wowLfo = ctx.createOscillator();
+  wowLfo.frequency.value = 0.35;
+  const wow = gain(7);
+  wowLfo.connect(wow);
+  wowLfo.start();
+  const mtof = m => 440 * Math.pow(2, (m - 69) / 12);
+  const note = (m, t, dur, vel) => {
+    const env = ctx.createGain();
+    env.gain.setValueAtTime(0.0001, t);
+    env.gain.linearRampToValueAtTime(vel, t + 0.03);
+    env.gain.exponentialRampToValueAtTime(vel * 0.35, t + 0.9);
+    env.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    env.connect(keys);
+    const tine = gain(0.18);
+    tine.connect(env);
+    [["sine", 1, env], ["triangle", 2, tine]].forEach(_ref11 => {
+      let [type, mult, out] = _ref11;
+      const o = ctx.createOscillator();
+      o.type = type;
+      o.frequency.value = mtof(m) * mult;
+      wow.connect(o.detune);
+      o.connect(out);
+      o.onended = () => {
+        try {
+          wow.disconnect(o.detune);
+        } catch (e) {
+          /* already gone */
+        }
+      };
+      o.start(t);
+      o.stop(t + dur + 0.1);
+    });
+  };
+
+  // Dmaj7 → Bm7 → Gmaj7 → A7, root in the bass.
+  const CHORDS = [[50, 62, 66, 69, 73], [47, 59, 62, 66, 69], [43, 55, 59, 62, 66], [45, 57, 61, 64, 67]];
+  const BAR = 3.4;
+  let nextT = 0;
+  let idx = 0;
+  let timer = null;
+  let clinkTimer = null;
+  const schedule = () => {
+    while (nextT < ctx.currentTime + 0.6) {
+      const ch = CHORDS[idx % CHORDS.length];
+      ch.forEach((m, i) => note(m, nextT + (i ? 0.03 * i + Math.random() * 0.02 : 0), BAR * 1.15, i ? 0.028 : 0.05));
+      if (Math.random() < 0.55) note(ch[2 + Math.floor(Math.random() * 3)] + 12, nextT + BAR * 0.5 + Math.random() * 0.4, 1.6, 0.014);
+      nextT += BAR;
+      idx++;
+    }
+  };
+
+  // A cup set down somewhere in the room.
+  const clink = () => {
+    const t = ctx.currentTime;
+    const out = ctx.createStereoPanner ? ctx.createStereoPanner() : gain(1);
+    if (out.pan) out.pan.value = Math.random() * 1.6 - 0.8;
+    out.connect(master);
+    [2637, 3951, 5274].forEach((f, i) => {
+      const o = ctx.createOscillator();
+      o.frequency.value = f * (0.98 + Math.random() * 0.04);
+      const g = ctx.createGain();
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(0.012 / (i + 1), t + 0.005);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + 0.35 + i * 0.1);
+      chain(o, g, out);
+      o.start(t);
+      o.stop(t + 0.7);
+    });
+  };
+  const queueClink = () => {
+    clinkTimer = setTimeout(() => {
+      clink();
+      queueClink();
+    }, 6000 + Math.random() * 9000);
+  };
+  return {
+    start() {
+      ctx.resume();
+      if (!timer) {
+        nextT = ctx.currentTime + 0.15;
+        schedule();
+        timer = setInterval(schedule, 250);
+        queueClink();
+      }
+      master.gain.cancelScheduledValues(ctx.currentTime);
+      master.gain.setTargetAtTime(0.6, ctx.currentTime, 0.9);
+    },
+    stop() {
+      master.gain.cancelScheduledValues(ctx.currentTime);
+      master.gain.setTargetAtTime(0, ctx.currentTime, 0.25);
+      clearInterval(timer);
+      clearTimeout(clinkTimer);
+      timer = null;
+      setTimeout(() => {
+        if (!timer) ctx.suspend();
+      }, 1200);
+    },
+    destroy() {
+      clearInterval(timer);
+      clearTimeout(clinkTimer);
+      ctx.close();
+    }
+  };
+}
+function useCafeAmbience() {
+  const engine = useRef(null);
+  const onRef = useRef(false);
+  const [on, setOn] = useState(false);
+  const toggle = useCallback(() => {
+    let next = !onRef.current;
+    try {
+      if (next) {
+        if (!engine.current) engine.current = createAmbience();
+        engine.current.start();
+      } else if (engine.current) engine.current.stop();
+    } catch (e) {
+      next = false;
+    }
+    onRef.current = next;
+    setOn(next);
+  }, []);
+  useEffect(() => () => engine.current && engine.current.destroy(), []);
+  return [on, toggle];
+}
+
+/* ───────────────────────── Coffee-bean celebration ───────────────────────── */
+
+function burstBeans(originX, originY) {
+  if (typeof document === "undefined") return;
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const canvas = document.createElement("canvas");
+  const W = window.innerWidth;
+  const H = window.innerHeight;
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  Object.assign(canvas.style, {
+    position: "fixed",
+    inset: "0",
+    width: "100%",
+    height: "100%",
+    pointerEvents: "none",
+    zIndex: "70"
+  });
+  document.body.appendChild(canvas);
+  const ctx = canvas.getContext("2d");
+  ctx.scale(dpr, dpr);
+  const BEANS = ["#3A2418", "#4A2F20", "#2C1A12", "#5A3A26"];
+  const FLECKS = ["#C49A6C", "#E8DFD8", "#8C6239", "#F4DFBC"];
+  const parts = Array.from({
+    length: reduce ? 24 : 96
+  }, () => {
+    const bean = Math.random() < 0.72;
+    return {
+      x: originX,
+      y: originY,
+      vx: (Math.random() - 0.5) * 15,
+      vy: -Math.random() * 15 - 6,
+      rot: Math.random() * Math.PI * 2,
+      vr: (Math.random() - 0.5) * 0.3,
+      size: bean ? 6 + Math.random() * 6 : 3 + Math.random() * 3,
+      bean,
+      color: bean ? BEANS[Math.random() * BEANS.length | 0] : FLECKS[Math.random() * FLECKS.length | 0]
+    };
+  });
+  const start = performance.now();
+  const LIFE = 3200;
+  const frame = now => {
+    const t = now - start;
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalAlpha = Math.max(0, Math.min(1, (LIFE - t) / 700));
+    parts.forEach(p => {
+      p.vy += 0.42;
+      p.vx *= 0.99;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.rot += p.vr;
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      if (p.bean) {
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.ellipse(0, 0, p.size * 0.66, p.size, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.strokeStyle = "rgba(196,154,108,0.55)";
+        ctx.lineWidth = p.size * 0.14;
+        ctx.beginPath();
+        ctx.moveTo(0, -p.size * 0.8);
+        ctx.bezierCurveTo(p.size * 0.35, -p.size * 0.25, -p.size * 0.35, p.size * 0.25, 0, p.size * 0.8);
+        ctx.stroke();
+      } else {
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size / 2, -p.size, p.size, p.size * 2);
+      }
+      ctx.restore();
+    });
+    if (t < LIFE) requestAnimationFrame(frame);else canvas.remove();
+  };
+  requestAnimationFrame(frame);
+}
+
+/* ───────────────────────── Canvas helpers (the shareable photo) ───────────────────────── */
+
+function drawSpaced(ctx, text, x, y, spacing) {
+  let align = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : "left";
+  const chars = [...text];
+  const widths = chars.map(ch => ctx.measureText(ch).width);
+  const total = widths.reduce((a, b) => a + b, 0) + spacing * (chars.length - 1);
+  let cursor = align === "center" ? x - total / 2 : align === "right" ? x - total : x;
+  const prev = ctx.textAlign;
+  ctx.textAlign = "left";
+  chars.forEach((ch, i) => {
+    ctx.fillText(ch, cursor, y);
+    cursor += widths[i] + spacing;
+  });
+  ctx.textAlign = prev;
+}
+function wrapLines(ctx, text, maxWidth) {
+  const words = text.split(" ");
+  const lines = [];
+  let line = "";
+  words.forEach(w => {
+    const test = line ? `${line} ${w}` : w;
+    if (ctx.measureText(test).width > maxWidth && line) {
+      lines.push(line);
+      line = w;
+    } else line = test;
+  });
+  if (line) lines.push(line);
+  // No lonely last word on a two-line title.
+  if (lines.length === 2 && !lines[1].includes(" ")) {
+    const head = lines[0].split(" ");
+    if (head.length > 2) lines.splice(0, 2, head.slice(0, -1).join(" "), `${head[head.length - 1]} ${lines[1]}`);
+  }
+  return lines;
+}
+function roundRectPath(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+
+// Draws NOD mark parts so that SVG point (0, 0) lands on (ox, oy).
+// Bounds in SVG space: wordmark x 164–687, y 258–496; emblem centred on (425.3, 425.2), 434 tall.
+function drawParts(ctx, parts, ox, oy, scale, color) {
+  ctx.save();
+  ctx.fillStyle = color;
+  ctx.translate(ox, oy);
+  ctx.scale(scale, scale);
+  ctx.transform(1, 0, 0, -1, 0, 850.32);
+  parts.forEach(_ref12 => {
+    let [tx, ty, d] = _ref12;
+    ctx.save();
+    ctx.translate(tx, ty);
+    ctx.fill(new Path2D(d));
+    ctx.restore();
+  });
+  ctx.restore();
+}
+const drawEmblem = (ctx, cx, cy, height, color) => {
+  const s = height / 434;
+  drawParts(ctx, NOD_EMBLEM, cx - 425.3 * s, cy - 425.2 * s, s, color);
+};
+
+/* ───────────────────────── Small pieces ───────────────────────── */
+
+function Wordmark(_ref13) {
+  let {
+    small = false,
+    gold = false
+  } = _ref13;
+  return /*#__PURE__*/React.createElement("div", {
+    className: "select-none leading-none"
+  }, /*#__PURE__*/React.createElement(NodWordmark, {
+    className: `block w-auto ${gold ? "text-[#C49430]" : "text-[#1E1915]"} ${small ? "h-[22px]" : "h-[28px]"}`
+  }), /*#__PURE__*/React.createElement("div", {
+    className: `mt-1.5 font-medium uppercase tracking-[0.3em] text-[#8C6239] ${small ? "text-[7px]" : "text-[8px]"}`
+  }, "Speciality Coffee Bar"));
+}
+function SoundToggle(_ref14) {
+  let {
+    on,
+    onToggle
+  } = _ref14;
+  return /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: onToggle,
+    "aria-pressed": on,
+    "aria-label": on ? "Turn café ambience off" : "Turn café ambience on",
+    className: `inline-flex items-center gap-2.5 rounded-full border bg-white/70 px-3.5 py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-[#2C221E] backdrop-blur transition duration-300 ${on ? "border-[#C49A6C]" : "border-[#E8DFD8] hover:border-[#C49A6C]"} ${FOCUS}`
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "flex h-3.5 items-end gap-[2.5px]",
+    "aria-hidden": "true"
+  }, [0, 1, 2, 3].map(i => /*#__PURE__*/React.createElement("span", {
+    key: i,
+    className: "h-full w-[2px] origin-bottom rounded-full bg-[#8C6239]",
+    style: {
+      transform: on ? undefined : `scaleY(${[0.3, 0.55, 0.4, 0.25][i]})`,
+      animation: on ? `nodWave ${0.9 + i * 0.17}s ease-in-out ${i * 0.12}s infinite` : "none",
+      transition: "transform .4s"
+    }
+  }))), /*#__PURE__*/React.createElement("span", null, on ? "Café on" : "Café sound"));
+}
+function Progress(_ref15) {
+  let {
+    step,
+    maxStep,
+    onNav
+  } = _ref15;
+  return /*#__PURE__*/React.createElement("nav", {
+    "aria-label": "Invitation progress",
+    className: "mt-5 flex justify-center"
+  }, /*#__PURE__*/React.createElement("ol", {
+    className: "flex items-center gap-1.5 sm:gap-2"
+  }, STEPS.map((label, i) => {
+    const active = i === step;
+    const reachable = i <= maxStep;
+    return /*#__PURE__*/React.createElement("li", {
+      key: label,
+      className: "flex items-center gap-1.5 sm:gap-2"
+    }, i > 0 && /*#__PURE__*/React.createElement("span", {
+      "aria-hidden": "true",
+      className: `h-px w-5 transition-colors duration-500 sm:w-10 ${i <= step ? "bg-[#C49A6C]" : "bg-[#E8DFD8]"}`
+    }), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      disabled: !reachable,
+      onClick: () => onNav(i),
+      "aria-current": active ? "step" : undefined,
+      "aria-label": `${String(i + 1).padStart(2, "0")} ${label}`,
+      className: `flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.2em] transition duration-300 disabled:cursor-default ${FOCUS} ${active ? "bg-[#1E1915] text-[#FAF7F2]" : i < step ? "text-[#8C6239] hover:text-[#1E1915]" : reachable ? "text-[#2C221E]/60 hover:text-[#1E1915]" : "text-[#2C221E]/35"}`
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "tabular-nums"
+    }, String(i + 1).padStart(2, "0")), /*#__PURE__*/React.createElement("span", {
+      className: active ? "inline" : "hidden sm:inline"
+    }, label)));
+  })));
+}
+function SteamCup(_ref16) {
+  let {
+    className = ""
+  } = _ref16;
+  return /*#__PURE__*/React.createElement("svg", {
+    viewBox: "0 0 64 64",
+    className: `overflow-visible ${className}`,
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    "aria-hidden": "true"
+  }, [24, 32, 40].map((x0, i) => /*#__PURE__*/React.createElement("path", {
+    key: x0,
+    className: "nod-steam",
+    style: {
+      animationDelay: `${i * 0.9}s`
+    },
+    d: `M${x0} 23 c-3 -4 3 -6.5 0 -11`
+  })), /*#__PURE__*/React.createElement("path", {
+    d: "M15 29 h32 v6 a14 14 0 0 1 -14 14 h-4 a14 14 0 0 1 -14 -14 z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M47 32 h3 a5 5 0 0 1 0 10 h-4.5"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12 55 h38"
+  }));
+}
+function Sheet(_ref17) {
+  let {
+    open,
+    onClose,
+    eyebrow,
+    title,
+    children
+  } = _ref17;
+  useEffect(() => {
+    if (!open) return undefined;
+    const onKey = e => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [open, onClose]);
+  if (!open) return null;
+  // Portal to <body>: an animating ancestor transform would otherwise trap `fixed` inside the screen.
+  return createPortal(/*#__PURE__*/React.createElement("div", {
+    className: "nod-root fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-6",
+    role: "dialog",
+    "aria-modal": "true",
+    "aria-label": title
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    "aria-label": "Close",
+    onClick: onClose,
+    className: "nod-fade absolute inset-0 cursor-default bg-[#1E1915]/45 backdrop-blur-[2px]"
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "nod-sheet relative w-full max-w-md overflow-y-auto rounded-t-[28px] bg-[#FAF7F2] px-5 pt-3 shadow-[0_-20px_60px_-20px_rgba(30,25,21,0.5)] sm:rounded-[28px] sm:pt-5",
+    style: {
+      maxHeight: "92dvh",
+      paddingBottom: "max(20px, env(safe-area-inset-bottom))"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "mx-auto mb-3 h-1 w-10 rounded-full bg-[#E8DFD8] sm:hidden"
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "mb-4 flex items-start justify-between gap-4"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+    className: "text-[10px] font-medium uppercase tracking-[0.28em] text-[#8C6239]"
+  }, eyebrow), /*#__PURE__*/React.createElement("h3", {
+    className: "mt-1.5 font-serif-nod text-[26px] leading-tight text-[#1E1915]"
+  }, title)), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: onClose,
+    "aria-label": "Close",
+    className: `grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[#E8DFD8] text-[#2C221E] transition hover:border-[#C49A6C] ${FOCUS}`
+  }, /*#__PURE__*/React.createElement(X, {
+    size: 16
+  }))), children)), document.body);
+}
+
+/* ───────────────────────── Screen 1 · The curated envelope ───────────────────────── */
+
+const waxEdgePath = (cx, cy, r, n) => {
+  const pts = Array.from({
+    length: n
+  }, (_, i) => {
+    const a = i / n * Math.PI * 2;
+    const rr = r + Math.sin(i * 2.7) * 2.2 + Math.cos(i * 1.3) * 1.6;
+    return [cx + Math.cos(a) * rr, cy + Math.sin(a) * rr];
+  });
+  const mid = (p, q) => [(p[0] + q[0]) / 2, (p[1] + q[1]) / 2];
+  const f = v => v.toFixed(2);
+  const m = mid(pts[n - 1], pts[0]);
+  let d = `M${f(m[0])} ${f(m[1])}`;
+  pts.forEach((p, i) => {
+    const q = mid(p, pts[(i + 1) % n]);
+    d += ` Q${f(p[0])} ${f(p[1])} ${f(q[0])} ${f(q[1])}`;
+  });
+  return `${d} Z`;
+};
+const WAX_EDGE = waxEdgePath(50, 50, 43, 22);
+function WaxSeal(_ref18) {
+  let {
+    cracked
+  } = _ref18;
+  const halves = {
+    l: {
+      clip: "M-10 -10 H51 L46 20 L55 37 L44 55 L53 73 L47 110 H-10 Z",
+      out: "translate(-16px, 30px) rotate(-26deg)"
+    },
+    r: {
+      clip: "M51 -10 H110 V110 H47 L53 73 L44 55 L55 37 L46 20 Z",
+      out: "translate(16px, 34px) rotate(22deg)"
+    }
+  };
+  return /*#__PURE__*/React.createElement("svg", {
+    viewBox: "0 0 100 100",
+    className: "h-[88px] w-[88px] overflow-visible sm:h-[100px] sm:w-[100px]",
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("radialGradient", {
+    id: "nod-wax",
+    cx: "38%",
+    cy: "32%",
+    r: "75%"
+  }, /*#__PURE__*/React.createElement("stop", {
+    offset: "0",
+    stopColor: "#DDB383"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: "0.55",
+    stopColor: "#A9763F"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: "1",
+    stopColor: "#6E4524"
+  })), /*#__PURE__*/React.createElement("filter", {
+    id: "nod-seal-shadow",
+    x: "-30%",
+    y: "-30%",
+    width: "160%",
+    height: "160%"
+  }, /*#__PURE__*/React.createElement("feDropShadow", {
+    dx: "0",
+    dy: "3",
+    stdDeviation: "3",
+    floodColor: "#1E1915",
+    floodOpacity: "0.35"
+  })), /*#__PURE__*/React.createElement("path", {
+    id: "nod-seal-ring",
+    d: "M19 50 a31 31 0 1 1 62 0 a31 31 0 1 1 -62 0"
+  }), Object.entries(halves).map(_ref19 => {
+    let [k, h] = _ref19;
+    return /*#__PURE__*/React.createElement("clipPath", {
+      key: k,
+      id: `nod-seal-${k}`
+    }, /*#__PURE__*/React.createElement("path", {
+      d: h.clip
+    }));
+  })), Object.entries(halves).map(_ref20 => {
+    let [k, h] = _ref20;
+    return /*#__PURE__*/React.createElement("g", {
+      key: k,
+      style: {
+        transformBox: "fill-box",
+        transformOrigin: "center",
+        transform: cracked ? h.out : "none",
+        opacity: cracked ? 0 : 1,
+        transition: `transform .9s ${EASE}, opacity .7s ease .15s`
+      }
+    }, /*#__PURE__*/React.createElement("g", {
+      clipPath: `url(#nod-seal-${k})`
+    }, /*#__PURE__*/React.createElement("path", {
+      d: WAX_EDGE,
+      fill: "url(#nod-wax)",
+      filter: "url(#nod-seal-shadow)"
+    }), /*#__PURE__*/React.createElement("circle", {
+      cx: "50",
+      cy: "50",
+      r: "36.5",
+      fill: "none",
+      stroke: "#5A371B",
+      strokeOpacity: "0.35",
+      strokeWidth: "1.2"
+    }), /*#__PURE__*/React.createElement("circle", {
+      cx: "50",
+      cy: "50",
+      r: "35.4",
+      fill: "none",
+      stroke: "#F3D7AE",
+      strokeOpacity: "0.35",
+      strokeWidth: "0.6"
+    }), /*#__PURE__*/React.createElement("text", {
+      fontSize: "6.1",
+      letterSpacing: "1.5",
+      fill: "#3E2614",
+      fillOpacity: "0.78",
+      fontFamily: "Inter, sans-serif",
+      fontWeight: "600"
+    }, /*#__PURE__*/React.createElement("textPath", {
+      href: "#nod-seal-ring"
+    }, "TAP TO UNSEAL \xB7 A NOD FOR ", GUEST.first.toUpperCase(), " \xB7")), /*#__PURE__*/React.createElement(EmblemAt, {
+      x: 50.6,
+      y: 51,
+      height: 27,
+      fill: "#4A2D16",
+      fillOpacity: "0.5"
+    }), /*#__PURE__*/React.createElement(EmblemAt, {
+      x: 50,
+      y: 50.3,
+      height: 27,
+      fill: "#F0D2A6",
+      fillOpacity: "0.6"
+    })));
+  }));
+}
+function EnvelopeScreen(_ref21) {
+  let {
+    onOpened
+  } = _ref21;
+  const [phase, setPhase] = useState(0); // 0 sealed · 1 seal cracks · 2 flap swings · 3 letter rises
+  const timers = useRef([]);
+  useEffect(() => () => timers.current.forEach(clearTimeout), []);
+  const unseal = () => {
+    if (phase) return;
+    setPhase(1);
+    const at = (ms, fn) => timers.current.push(setTimeout(fn, ms));
+    at(280, () => setPhase(2));
+    at(700, () => setPhase(3));
+    at(2050, onOpened);
+  };
+  const fadeHero = `transition-opacity duration-700 ${phase >= 3 ? "opacity-0" : "opacity-100"}`;
+  return /*#__PURE__*/React.createElement("section", {
+    className: "nod-screen mx-auto flex w-full max-w-lg flex-col items-center pt-2 text-center sm:pt-6"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: `flex flex-col items-center ${fadeHero}`
+  }, /*#__PURE__*/React.createElement(SteamCup, {
+    className: "h-11 w-11 text-[#8C6239]"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: `${PILL} mt-3`
+  }, COPY.envelopePill), /*#__PURE__*/React.createElement("h1", {
+    className: "mt-5 max-w-[18ch] font-serif-nod text-[31px] italic leading-[1.12] text-[#1E1915] sm:text-[46px]"
+  }, /*#__PURE__*/React.createElement(Emph, {
+    text: COPY.envelopeTitle,
+    className: "text-[#C49A6C]"
+  })), /*#__PURE__*/React.createElement("p", {
+    className: "mt-2 font-serif-nod text-[18px] italic text-[#8C6239] sm:text-[22px]"
+  }, COPY.envelopeSubtitle), /*#__PURE__*/React.createElement("p", {
+    className: "mt-3 max-w-[34ch] text-[13px] leading-relaxed text-[#2C221E]/65"
+  }, COPY.envelopeBody)), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: unseal,
+    "aria-label": "Tap to unseal your invitation",
+    className: `relative mt-9 block w-full max-w-[400px] rounded-[20px] ${FOCUS} ${phase ? "cursor-default" : "cursor-pointer"}`,
+    style: {
+      aspectRatio: "1.5 / 1",
+      perspective: "1200px"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "absolute inset-0 rounded-[18px] bg-[#E9DDD0] shadow-[0_40px_70px_-35px_rgba(30,25,21,0.55)]"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "absolute inset-x-0 top-0 h-[58%] rounded-t-[18px] bg-[#2C221E]",
+    style: {
+      clipPath: "polygon(0 0, 100% 0, 50% 96%)",
+      backgroundImage: "repeating-linear-gradient(135deg, rgba(196,154,108,.16) 0 1px, transparent 1px 9px)"
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "absolute left-[7%] right-[7%] top-[7%] block h-[86%] rounded-[12px] border border-[#E8DFD8] bg-[#FFFDF9] px-5 pt-5 text-left shadow-[0_10px_30px_-18px_rgba(30,25,21,0.5)]",
+    style: {
+      zIndex: 2,
+      transform: phase >= 3 ? "translateY(-50%)" : "translateY(0)",
+      transition: `transform 1.25s ${EASE}`
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "block text-[9px] font-medium uppercase tracking-[0.3em] text-[#8C6239]"
+  }, "For ", GUEST.full), /*#__PURE__*/React.createElement("span", {
+    className: "mt-2 block font-serif-nod text-[20px] italic text-[#1E1915]"
+  }, COPY.letterGreeting), /*#__PURE__*/React.createElement("span", {
+    className: "mt-3 block h-[3px] w-[82%] rounded-full bg-[#E8DFD8]"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "mt-2 block h-[3px] w-[68%] rounded-full bg-[#E8DFD8]"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "mt-2 block h-[3px] w-[74%] rounded-full bg-[#E8DFD8]"
+  })), /*#__PURE__*/React.createElement("span", {
+    className: "absolute inset-0 rounded-[18px] bg-[#F2E9DF]",
+    style: {
+      zIndex: 3,
+      clipPath: "polygon(0 0, 50% 54%, 100% 0, 100% 100%, 0 100%)",
+      backgroundImage: "linear-gradient(180deg, rgba(255,255,255,.35), rgba(232,223,216,.25))"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "absolute inset-x-0 bottom-[10%] flex flex-col items-center gap-1.5 px-4"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "flex flex-wrap items-baseline justify-center gap-x-2 text-[#1E1915]"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-[9px] font-semibold uppercase tracking-[0.32em]"
+  }, "A nod to"), /*#__PURE__*/React.createElement("span", {
+    className: "font-serif-nod text-[15px] italic sm:text-[17px]"
+  }, GUEST.handle)), /*#__PURE__*/React.createElement("span", {
+    className: "text-[8.5px] font-medium uppercase tracking-[0.24em] text-[#8C6239] sm:text-[9.5px]"
+  }, "// Private invitation for ", GUEST.full)), /*#__PURE__*/React.createElement("span", {
+    className: "absolute bottom-3 right-4 hidden text-[8px] uppercase tracking-[0.25em] text-[#2C221E]/40 sm:block"
+  }, "New home \xB7 ", VENUE.district)), /*#__PURE__*/React.createElement("span", {
+    className: "absolute inset-x-0 top-0 block h-[58%] origin-top",
+    style: {
+      zIndex: phase >= 3 ? 1 : 4,
+      transform: phase >= 2 ? "rotateX(180deg)" : "rotateX(0deg)",
+      transition: "transform .75s cubic-bezier(0.5, 0, 0.2, 1)",
+      filter: "drop-shadow(0 6px 8px rgba(30,25,21,0.12))"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "absolute inset-0 rounded-t-[18px] bg-[#E7D9C9]",
+    style: {
+      clipPath: "polygon(0 0, 100% 0, 50% 96%)"
+    }
+  })), /*#__PURE__*/React.createElement("span", {
+    className: "absolute left-1/2 top-[54%] -translate-x-1/2 -translate-y-1/2",
+    style: {
+      zIndex: 5
+    }
+  }, /*#__PURE__*/React.createElement(WaxSeal, {
+    cracked: phase >= 1
+  }))), /*#__PURE__*/React.createElement("p", {
+    className: `mt-7 inline-flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.3em] text-[#8C6239] transition-opacity duration-500 ${phase ? "opacity-0" : "opacity-100"}`
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "nod-blink h-1.5 w-1.5 rounded-full bg-[#C49A6C]"
+  }), " ", COPY.envelopeHint));
+}
+
+/* ───────────────────────── Screen 2 · Brew your nod moment ───────────────────────── */
+
+const STEAM = ["M92 40 C 84 30, 100 22, 92 10", "M110 42 C 102 30, 118 20, 110 6", "M128 40 C 120 30, 136 22, 128 10", "M101 44 C 95 34, 108 26, 101 16", "M119 44 C 113 34, 126 26, 119 16"];
+const ICE = [{
+  x: 90,
+  dy: 16,
+  s: 26,
+  r: -12
+}, {
+  x: 128,
+  dy: 12,
+  s: 24,
+  r: 18
+}, {
+  x: 109,
+  dy: 40,
+  s: 22,
+  r: 6
+}];
+function CupVisual(_ref22) {
+  let {
+    drink,
+    className = ""
+  } = _ref22;
+  const {
+    slots,
+    surface,
+    surfaceColor,
+    foamDepth
+  } = drink.visual;
+  const layerStyle = top => ({
+    transform: `translateY(${top}px)`,
+    transition: `transform 1.1s ${EASE}, fill .9s ease`
+  });
+  return /*#__PURE__*/React.createElement("svg", {
+    viewBox: "0 -24 220 284",
+    className: className,
+    role: "img",
+    "aria-label": `Illustration of a ${drink.title}`
+  }, /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
+    id: "nod-glass-in"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M45 50 L61 218 Q62 222 67 222 L153 222 Q158 222 159 218 L175 50 Z"
+  })), /*#__PURE__*/React.createElement("filter", {
+    id: "nod-soft",
+    x: "-5%",
+    y: "-5%",
+    width: "110%",
+    height: "110%"
+  }, /*#__PURE__*/React.createElement("feGaussianBlur", {
+    stdDeviation: "0 2.4"
+  })), /*#__PURE__*/React.createElement("filter", {
+    id: "nod-blur",
+    x: "-50%",
+    y: "-50%",
+    width: "200%",
+    height: "200%"
+  }, /*#__PURE__*/React.createElement("feGaussianBlur", {
+    stdDeviation: "1.6"
+  })), /*#__PURE__*/React.createElement("linearGradient", {
+    id: "nod-glass-sheen",
+    x1: "0",
+    x2: "1",
+    y1: "0",
+    y2: "0"
+  }, /*#__PURE__*/React.createElement("stop", {
+    offset: "0",
+    stopColor: "#FFFFFF",
+    stopOpacity: "0.5"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: "0.25",
+    stopColor: "#FFFFFF",
+    stopOpacity: "0"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: "0.8",
+    stopColor: "#FFFFFF",
+    stopOpacity: "0"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: "1",
+    stopColor: "#FFFFFF",
+    stopOpacity: "0.3"
+  }))), /*#__PURE__*/React.createElement("ellipse", {
+    cx: "110",
+    cy: "236",
+    rx: "72",
+    ry: "8",
+    fill: "#1E1915",
+    opacity: "0.13",
+    filter: "url(#nod-blur)"
+  }), /*#__PURE__*/React.createElement("g", {
+    style: {
+      opacity: drink.iced ? 0 : 1,
+      transition: "opacity .8s ease"
+    }
+  }, STEAM.slice(0, drink.extraHot ? 5 : 3).map((d, i) => /*#__PURE__*/React.createElement("path", {
+    key: d,
+    d: d,
+    className: "nod-steam",
+    style: {
+      animationDelay: `${i * 0.65}s`,
+      animationDuration: drink.extraHot ? "2.4s" : "3.4s"
+    },
+    fill: "none",
+    stroke: "#B9A797",
+    strokeWidth: "3",
+    strokeLinecap: "round",
+    filter: "url(#nod-blur)"
+  }))), /*#__PURE__*/React.createElement("g", {
+    clipPath: "url(#nod-glass-in)"
+  }, /*#__PURE__*/React.createElement("rect", {
+    x: "0",
+    y: "0",
+    width: "220",
+    height: "260",
+    fill: "#FFFFFF",
+    opacity: "0.35"
+  }), /*#__PURE__*/React.createElement("g", {
+    filter: "url(#nod-soft)"
+  }, ["foam", "upper", "middle", "lower"].map(k => /*#__PURE__*/React.createElement("rect", {
+    key: k,
+    x: "20",
+    y: "0",
+    width: "180",
+    height: "260",
+    fill: slots[k].color,
+    style: layerStyle(slots[k].top)
+  }))), /*#__PURE__*/React.createElement("ellipse", {
+    cx: "0",
+    cy: "0",
+    rx: "1",
+    ry: "1",
+    fill: surfaceColor,
+    style: {
+      transform: `translate(110px, ${surface}px) scale(${glassHalfWidth(surface)}, 4.5)`,
+      transition: `transform 1.1s ${EASE}, fill .9s ease`
+    }
+  }), /*#__PURE__*/React.createElement("ellipse", {
+    cx: "0",
+    cy: "0",
+    rx: "1",
+    ry: "1",
+    fill: "#FFFFFF",
+    opacity: "0.18",
+    style: {
+      transform: `translate(104px, ${surface - 1}px) scale(${glassHalfWidth(surface) * 0.7}, 2)`,
+      transition: `transform 1.1s ${EASE}`
+    }
+  }), ICE.map(c => /*#__PURE__*/React.createElement("g", {
+    key: c.x,
+    style: {
+      opacity: drink.iced ? 1 : 0,
+      transform: `translate(${c.x}px, ${surface + foamDepth + c.dy}px)`,
+      transition: `opacity .6s ease, transform 1.1s ${EASE}`
+    }
+  }, /*#__PURE__*/React.createElement("rect", {
+    className: "nod-ice",
+    x: -c.s / 2,
+    y: -c.s / 2,
+    width: c.s,
+    height: c.s,
+    rx: "5",
+    fill: "#FFFFFF",
+    fillOpacity: "0.32",
+    stroke: "#FFFFFF",
+    strokeOpacity: "0.85",
+    strokeWidth: "1.2",
+    style: {
+      "--r": `${c.r}deg`
+    }
+  }))), /*#__PURE__*/React.createElement("rect", {
+    x: "0",
+    y: "0",
+    width: "220",
+    height: "260",
+    fill: "url(#nod-glass-sheen)"
+  })), /*#__PURE__*/React.createElement("path", {
+    d: "M40 46 L57.5 221 Q59 230 68 230 L152 230 Q161 230 162.5 221 L180 46",
+    fill: "none",
+    stroke: "#2C221E",
+    strokeOpacity: "0.24",
+    strokeWidth: "1.5"
+  }), /*#__PURE__*/React.createElement("ellipse", {
+    cx: "110",
+    cy: "46",
+    rx: "70",
+    ry: "5",
+    fill: "none",
+    stroke: "#2C221E",
+    strokeOpacity: "0.22",
+    strokeWidth: "1.3"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M61 222 L159 222",
+    stroke: "#FFFFFF",
+    strokeOpacity: "0.6",
+    strokeWidth: "1.2"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M51 62 L63 205",
+    stroke: "#FFFFFF",
+    strokeOpacity: "0.65",
+    strokeWidth: "3",
+    strokeLinecap: "round"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M168 72 L161 150",
+    stroke: "#FFFFFF",
+    strokeOpacity: "0.35",
+    strokeWidth: "2",
+    strokeLinecap: "round"
+  }), /*#__PURE__*/React.createElement("g", {
+    transform: "translate(110 184)"
+  }, /*#__PURE__*/React.createElement("rect", {
+    x: "-46",
+    y: "-19",
+    width: "92",
+    height: "38",
+    rx: "6",
+    fill: "#FAF7F2",
+    stroke: "#E8DFD8"
+  }), /*#__PURE__*/React.createElement("text", {
+    y: "-5",
+    textAnchor: "middle",
+    fontSize: "6.5",
+    letterSpacing: "2",
+    fill: "#8C6239",
+    fontFamily: "Inter, sans-serif",
+    fontWeight: "600"
+  }, "NOD \xB7 NO. 01"), /*#__PURE__*/React.createElement("text", {
+    y: "12",
+    textAnchor: "middle",
+    fontSize: "15",
+    fill: "#1E1915",
+    fontFamily: "Caveat, cursive",
+    fontWeight: "600"
+  }, drink.sticker, " \u2014 ", GUEST.first)));
+}
+
+// A pencilled note beside a menu item ("your fav.", "our one & only").
+function PencilTag(_ref23) {
+  let {
+    text,
+    light = false
+  } = _ref23;
+  return /*#__PURE__*/React.createElement("span", {
+    className: `inline-flex -rotate-3 items-center gap-1 ${light ? "text-[#F4DFBC]" : "text-[#2B2724]"}`
+  }, /*#__PURE__*/React.createElement("svg", {
+    viewBox: "0 0 22 10",
+    className: "h-[9px] w-[20px]",
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M21 6 C15 2 8 2 2 5 M6 1.5 L2 5 L6.5 8.5",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "1.4",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })), /*#__PURE__*/React.createElement("span", {
+    className: "font-hand text-[18px] font-semibold leading-none"
+  }, text));
+}
+function ProfileMeters(_ref24) {
+  let {
+    profile
+  } = _ref24;
+  return /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-4 gap-3"
+  }, PROFILE_KEYS.map(_ref25 => {
+    let [k, label] = _ref25;
+    return /*#__PURE__*/React.createElement("div", {
+      key: k
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-[9px] font-medium uppercase tracking-[0.18em] text-[#2C221E]/55"
+    }, label), /*#__PURE__*/React.createElement("div", {
+      className: "mt-1.5 flex gap-[3px]",
+      "aria-label": `${label} ${profile[k]} of 5`,
+      role: "img"
+    }, [1, 2, 3, 4, 5].map(n => /*#__PURE__*/React.createElement("span", {
+      key: n,
+      className: `h-1.5 flex-1 rounded-full transition-colors duration-500 ${n <= profile[k] ? "bg-[#C49A6C]" : "bg-[#E8DFD8]"}`
+    }))));
+  }));
+}
+function BrewScreen(_ref26) {
+  let {
+    order,
+    setOrder,
+    drink,
+    onComplete
+  } = _ref26;
+  const [tab, setTab] = useState(0);
+  const [brewing, setBrewing] = useState(false);
+  const timers = useRef([]);
+  useEffect(() => () => timers.current.forEach(clearTimeout), []);
+  const later = (ms, fn) => timers.current.push(setTimeout(fn, ms));
+  const group = GROUPS[tab];
+  const pick = id => {
+    setOrder(o => ({
+      ...o,
+      [group.key]: id
+    }));
+    const from = tab;
+    if (from < GROUPS.length - 1) later(420, () => setTab(t => t === from ? t + 1 : t));
+  };
+  const complete = () => {
+    if (brewing) return;
+    setBrewing(true);
+    later(1150, onComplete);
+  };
+  const TempIcon = drink.iced ? Snowflake : Flame;
+  return /*#__PURE__*/React.createElement("section", {
+    className: "nod-screen mx-auto w-full max-w-5xl"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "mx-auto max-w-xl text-center"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: PILL
+  }, /*#__PURE__*/React.createElement(Coffee, {
+    size: 12
+  }), " ", COPY.brewPill), /*#__PURE__*/React.createElement("h2", {
+    className: "mt-4 font-serif-nod text-[30px] leading-[1.08] sm:text-[44px]"
+  }, /*#__PURE__*/React.createElement(Emph, {
+    text: COPY.brewTitle,
+    className: "text-[#8C6239]"
+  })), /*#__PURE__*/React.createElement("p", {
+    className: "mx-auto mt-3 max-w-sm text-[13.5px] leading-relaxed text-[#2C221E]/70"
+  }, COPY.brewBody)), /*#__PURE__*/React.createElement("div", {
+    className: "mt-7 flex flex-col gap-5 lg:mt-10 lg:grid lg:grid-cols-[1.05fr_1fr] lg:gap-8"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "sticky top-0 z-20 -mx-4 bg-[#FAF7F2]/90 px-4 pb-3 pt-2 backdrop-blur-md lg:top-6 lg:mx-0 lg:self-start lg:bg-transparent lg:p-0 lg:backdrop-blur-none"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-3xl border border-[#E8DFD8] bg-gradient-to-b from-white/85 to-[#F4EFEB]/85 p-4 shadow-[0_30px_60px_-40px_rgba(30,25,21,0.5)] sm:p-6"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-3 sm:gap-6"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "w-[104px] shrink-0 sm:w-[170px] lg:w-[210px]"
+  }, /*#__PURE__*/React.createElement(CupVisual, {
+    drink: drink,
+    className: "h-auto w-full"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "min-w-0 flex-1",
+    "aria-live": "polite"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "inline-flex items-center gap-1.5 rounded-full bg-[#1E1915] px-2.5 py-1 text-[9px] font-medium uppercase tracking-[0.22em] text-[#F4DFBC]"
+  }, /*#__PURE__*/React.createElement(TempIcon, {
+    size: 10
+  }), " ", drink.iced ? "Served cold" : "Served hot"), /*#__PURE__*/React.createElement("h3", {
+    key: drink.title,
+    className: "nod-rise mt-2.5 font-serif-nod text-[19px] leading-[1.15] sm:text-[28px]"
+  }, drink.title), /*#__PURE__*/React.createElement("p", {
+    key: drink.notesLine,
+    className: "nod-rise mt-2 text-[12px] leading-relaxed text-[#2C221E]/70 sm:text-[13.5px]"
+  }, drink.notesLine), /*#__PURE__*/React.createElement("p", {
+    key: drink.pairing.id,
+    className: "nod-rise mt-2 hidden text-[12.5px] text-[#2C221E]/70 sm:block"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "font-medium text-[#1E1915]"
+  }, "+ ", drink.pairing.name), " \u2014 ", drink.pairing.note, "."))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-4 border-t border-[#E8DFD8] pt-3.5"
+  }, /*#__PURE__*/React.createElement(ProfileMeters, {
+    profile: drink.profile
+  })))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    role: "tablist",
+    "aria-label": "Brew steps",
+    className: "grid grid-cols-3 gap-1 rounded-full border border-[#E8DFD8] bg-white/60 p-1"
+  }, GROUPS.map((g, i) => {
+    const current = g.items.find(it => it.id === order[g.key]);
+    const active = i === tab;
+    return /*#__PURE__*/React.createElement("button", {
+      key: g.key,
+      type: "button",
+      role: "tab",
+      "aria-selected": active,
+      onClick: () => setTab(i),
+      className: `rounded-full px-2 py-2 text-center transition duration-300 ${FOCUS} ${active ? "bg-[#1E1915] text-[#FAF7F2]" : "text-[#2C221E]/70 hover:text-[#1E1915]"}`
+    }, /*#__PURE__*/React.createElement("span", {
+      className: `block text-[9px] font-medium uppercase tracking-[0.24em] ${active ? "text-[#C49A6C]" : ""}`
+    }, g.letter, " \xB7 ", g.label), /*#__PURE__*/React.createElement("span", {
+      className: "mt-0.5 block truncate text-[12px]"
+    }, current ? current.short : "—"));
+  })), /*#__PURE__*/React.createElement("p", {
+    className: "mt-5 text-[10px] font-medium uppercase tracking-[0.28em] text-[#8C6239]"
+  }, "Step ", group.letter, " \u2014 ", group.title), /*#__PURE__*/React.createElement("div", {
+    key: group.key,
+    role: "radiogroup",
+    "aria-label": group.title,
+    className: "nod-rise mt-3 grid gap-2.5"
+  }, group.items.map(item => {
+    const sel = order[group.key] === item.id;
+    const Icon = item.icon;
+    return /*#__PURE__*/React.createElement("button", {
+      key: item.id,
+      type: "button",
+      role: "radio",
+      "aria-checked": sel,
+      onClick: () => pick(item.id),
+      className: `flex w-full items-center gap-3 rounded-2xl border px-3.5 py-3 text-left transition-all duration-300 nod-ease ${FOCUS} ${sel ? "border-[#1E1915] bg-[#1E1915] text-[#FAF7F2] shadow-[0_14px_30px_-18px_rgba(30,25,21,0.85)]" : "border-[#E8DFD8] bg-white/60 text-[#1E1915] hover:border-[#C49A6C]"}`
+    }, /*#__PURE__*/React.createElement("span", {
+      className: `grid h-10 w-10 shrink-0 place-items-center rounded-full transition-colors duration-300 ${sel ? "bg-[#C49A6C]/20 text-[#F4DFBC]" : "bg-[#F4EFEB] text-[#8C6239]"}`
+    }, /*#__PURE__*/React.createElement(Icon, {
+      size: 18,
+      strokeWidth: 1.6
+    })), /*#__PURE__*/React.createElement("span", {
+      className: "min-w-0 flex-1"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "flex flex-wrap items-center gap-x-2"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "text-[14px] font-medium leading-snug"
+    }, item.name), item.tag && /*#__PURE__*/React.createElement(PencilTag, {
+      text: item.tag,
+      light: sel
+    })), /*#__PURE__*/React.createElement("span", {
+      className: `block text-[12px] leading-snug ${sel ? "text-[#E8DFD8]/75" : "text-[#2C221E]/60"}`
+    }, item.desc)), /*#__PURE__*/React.createElement("span", {
+      className: `grid h-5 w-5 shrink-0 place-items-center rounded-full border transition-colors duration-300 ${sel ? "border-[#C49A6C] bg-[#C49A6C] text-[#1E1915]" : "border-[#D9CCBF]"}`
+    }, sel && /*#__PURE__*/React.createElement(Check, {
+      size: 12,
+      strokeWidth: 3
+    })));
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "sticky bottom-0 z-20 -mx-4 mt-4 bg-gradient-to-t from-[#FAF7F2] via-[#FAF7F2]/95 to-[#FAF7F2]/0 px-4 pt-6 lg:static lg:mx-0 lg:bg-none lg:px-0",
+    style: {
+      paddingBottom: "max(16px, env(safe-area-inset-bottom))"
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: complete,
+    className: BTN_PRIMARY,
+    "aria-busy": brewing
+  }, brewing && /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
+    className: "nod-brewing absolute inset-0 bg-[#C49A6C]/35"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "relative inline-flex items-center gap-2.5"
+  }, brewing ? "Pulling your shot…" : COPY.brewButton, !brewing && /*#__PURE__*/React.createElement(ArrowRight, {
+    size: 16
+  })))))));
+}
+
+/* ───────────────────────── Screen 3 · The golden letter ───────────────────────── */
+
+function LetterScreen(_ref27) {
+  let {
+    drink,
+    onNext,
+    onEdit
+  } = _ref27;
+  const rise = ms => ({
+    animationDelay: `${ms}ms`
+  });
+  return /*#__PURE__*/React.createElement("section", {
+    className: "nod-screen mx-auto w-full max-w-xl"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-center"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: PILL
+  }, /*#__PURE__*/React.createElement(Sparkles, {
+    size: 12
+  }), " ", COPY.letterPill)), /*#__PURE__*/React.createElement("div", {
+    className: "nod-unfold mt-6"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-[30px] bg-gradient-to-br from-[#EBD3A8] via-[#C49A6C] to-[#8C6239] p-[1.5px] shadow-[0_40px_80px_-40px_rgba(30,25,21,0.6)]"
+  }, /*#__PURE__*/React.createElement("article", {
+    className: "relative overflow-hidden rounded-[28.5px] bg-[#FFFDF9] px-5 pb-7 pt-6 sm:px-10 sm:pb-10 sm:pt-9"
+  }, /*#__PURE__*/React.createElement("div", {
+    "aria-hidden": "true",
+    className: "nod-crease pointer-events-none absolute inset-x-0 top-1/2 h-28 -translate-y-1/2 bg-gradient-to-b from-transparent via-[#1E1915]/[0.06] to-transparent"
+  }), /*#__PURE__*/React.createElement("div", {
+    "aria-hidden": "true",
+    className: "pointer-events-none absolute inset-2.5 rounded-[22px] border border-[#E8DFD8]"
+  }), /*#__PURE__*/React.createElement("header", {
+    className: "relative flex items-center justify-between"
+  }, /*#__PURE__*/React.createElement(Wordmark, {
+    small: true,
+    gold: true
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "rounded-full border border-[#C49A6C]/55 px-3 py-1 text-[9.5px] font-semibold uppercase tracking-[0.28em]"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "nod-foil"
+  }, COPY.letterBadge))), /*#__PURE__*/React.createElement("div", {
+    className: "relative mt-8"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "nod-rise text-[10px] font-medium uppercase tracking-[0.3em] text-[#8C6239]",
+    style: rise(350)
+  }, COPY.letterEyebrow), /*#__PURE__*/React.createElement("h2", {
+    className: "nod-rise mt-3 font-serif-nod text-[42px] italic leading-none text-[#1E1915] sm:text-[52px]",
+    style: rise(450)
+  }, COPY.letterGreeting), /*#__PURE__*/React.createElement("div", {
+    className: "mt-5 space-y-4 text-[15px] leading-[1.75] text-[#2C221E]/85"
+  }, String(COPY.letterBody).split(/\n\s*\n/).filter(para => para.trim()).map((para, i) => /*#__PURE__*/React.createElement("p", {
+    key: i,
+    className: "nod-rise",
+    style: rise(600 + i * 100)
+  }, /*#__PURE__*/React.createElement(Lines, {
+    text: para.trim()
+  })))), /*#__PURE__*/React.createElement("div", {
+    className: "nod-rise mt-6",
+    style: rise(900)
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "font-hand text-[32px] font-semibold leading-none text-[#2B2724]"
+  }, COPY.letterSignoff), /*#__PURE__*/React.createElement("p", {
+    className: "mt-1.5 text-[10px] font-medium uppercase tracking-[0.3em] text-[#2C221E]/60"
+  }, COPY.letterSignature))), /*#__PURE__*/React.createElement("div", {
+    className: "nod-rise relative mt-7 flex items-center gap-3 rounded-2xl bg-[#F4EFEB] p-3.5 sm:p-4",
+    style: rise(1000)
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#1E1915] text-[#F4DFBC]"
+  }, /*#__PURE__*/React.createElement(Coffee, {
+    size: 18,
+    strokeWidth: 1.6
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "min-w-0 flex-1"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-[9px] font-medium uppercase tracking-[0.26em] text-[#8C6239]"
+  }, COPY.letterOrderLabel), /*#__PURE__*/React.createElement("p", {
+    className: "mt-0.5 font-serif-nod text-[16px] leading-snug text-[#1E1915]"
+  }, drink.title), /*#__PURE__*/React.createElement("p", {
+    className: "text-[12px] text-[#2C221E]/65"
+  }, "+ ", drink.pairing.name)), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: onEdit,
+    className: `shrink-0 rounded-full border border-[#E8DFD8] bg-white/70 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.2em] text-[#2C221E] transition hover:border-[#C49A6C] ${FOCUS}`
+  }, "Edit"))))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-7 flex flex-col gap-3 sm:flex-row-reverse"
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: onNext,
+    className: BTN_PRIMARY
+  }, COPY.letterButton, " ", /*#__PURE__*/React.createElement(ArrowRight, {
+    size: 16
+  })), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: onEdit,
+    className: `${BTN_GHOST} sm:w-auto sm:px-7`
+  }, /*#__PURE__*/React.createElement(ArrowLeft, {
+    size: 15
+  }), " Re-brew")));
+}
+
+/* ───────────────────────── Screen 4 · You're invited (sketchbook ending) ───────────────────────── */
+
+// Graphite pencil, for every drawn line and handwritten word on the last page.
+const PENCIL = "#2B2724";
+const PAPER = "#FFFDF9";
+
+// What sits on her plate, drawn to match the pairing she picked.
+const PAIRING_SKETCH = {
+  croissant: [{
+    d: "M164 210 C170 193 210 193 216 210 C208 204 172 204 164 210"
+  }, {
+    d: "M176 201 l3 6 M190 198 l0 7 M203 201 l-3 6",
+    w: 1
+  }],
+  painsuisse: [{
+    d: "M166 203 C176 199 198 197 212 200 C216 203 214 208 210 209 C196 211 176 212 168 210 C163 208 162 205 166 203 Z"
+  }, {
+    d: "M168 210 C168 213 170 215 174 215 C186 215 200 214 210 212 C213 211 213 209 210 209",
+    w: 1.2
+  }, {
+    d: "M175 204 h.1 M184 202 h.1 M193 203 h.1 M202 202 h.1 M180 207 h.1 M189 206.5 h.1 M198 206 h.1 M206 205 h.1",
+    w: 2,
+    o: 0.75
+  }],
+  tiramisu: [{
+    d: "M170 201 L198 196 L214 202 L186 207 Z"
+  }, {
+    d: "M170 201 L170 213 L186 219 L214 213 L214 202 M186 207 L186 219"
+  }, {
+    d: "M170 207 L186 213 L214 207",
+    w: 1,
+    o: 0.6
+  }, {
+    d: "M178 201 h.1 M187 199 h.1 M196 200 h.1 M192 203 h.1 M182 203.5 h.1 M202 202 h.1",
+    w: 1.8,
+    o: 0.7
+  }]
+};
+
+// The sketch as plain data in a 360×300 box, so the page (SVG) and the shareable photo (canvas)
+// draw exactly the same lines. Each stroke: { d, at, dur, w, o }.
+function sketchData(_ref28) {
+  let {
+    usual,
+    name,
+    pairing
+  } = _ref28;
+  const S = function (d, at) {
+    let dur = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    let w = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1.5;
+    let o = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+    return {
+      d,
+      at,
+      dur,
+      w,
+      o
+    };
+  };
+  const cup = (cx, by, s, at) => {
+    const P = (dx, dy) => `${(cx + dx * s).toFixed(1)} ${(by + dy * s).toFixed(1)}`;
+    return [S(`M${P(-38, 0)} C${P(-38, -11)} ${P(38, -11)} ${P(38, 0)} C${P(38, 11)} ${P(-38, 11)} ${P(-36, -1)}`, at, 0.8), S(`M${P(-22, -32)} C${P(-21, -10)} ${P(-14, -3)} ${P(0, -3)} C${P(14, -3)} ${P(21, -10)} ${P(22, -32)}`, at + 0.3, 0.7), S(`M${P(-22, -32)} C${P(-22, -39)} ${P(22, -39)} ${P(22, -32)} C${P(22, -26)} ${P(-22, -26)} ${P(-21, -33)}`, at + 0.6, 0.6), S(`M${P(-16, -31)} C${P(-10, -28.5)} ${P(10, -28.5)} ${P(16, -31)}`, at + 0.9, 0.4, 1, 0.6), S(`M${P(21, -27)} C${P(34, -29)} ${P(35, -11)} ${P(18, -12)}`, at + 0.9, 0.5), S(`M${P(-8, -44)} C${P(-14, -51)} ${P(-2, -56)} ${P(-8, -64)}`, at + 1.3, 0.9, 1.1, 0.55), S(`M${P(3, -46)} C${P(-3, -53)} ${P(9, -58)} ${P(3, -68)}`, at + 1.45, 0.9, 1.1, 0.55), S(`M${P(13, -43)} C${P(8, -49)} ${P(18, -53)} ${P(13, -60)}`, at + 1.6, 0.9, 1.1, 0.55)];
+  };
+  return {
+    // behind the table: the window with its view, and two chairs
+    back: [S("M100 118 L100 12 L260 12 L260 118 Z", 0.1, 1.3, 1.1, 0.5), S("M94 122 L266 122", 0.6, 0.6, 1.3, 0.55), S("M180 12 L180 118 M100 44 L260 44", 0.8, 0.8, 0.9, 0.4), S("M102 104 C124 94 140 100 158 93 C172 88 190 99 208 91 C226 84 244 95 258 89", 1.1, 1, 0.9, 0.45), S("M236 72 A10 10 0 1 1 216 72 A10 10 0 1 1 236 72", 1.3, 0.8, 0.9, 0.45), S("M118 64 q4 -4 8 0 q4 -4 8 0 M138 56 q3 -3 6 0 q3 -3 6 0", 1.5, 0.6, 0.9, 0.45), S("M16 288 C18 250 19 210 20 186 C18 162 20 142 30 134 C38 128 58 128 66 134 C74 142 76 162 74 182", 0.9, 1.2), S("M29 214 C28 170 32 148 38 144 C44 140 54 140 58 144 C64 148 66 164 65 180", 1.2, 1, 1.1, 0.7), S("M10 214 C14 208 26 207 30 209 M64 226 L66 288 M17 266 C30 270 52 270 65 266", 1.5, 0.8, 1.2), S("M344 288 C342 250 341 210 340 186 C342 162 340 142 330 134 C322 128 302 128 294 134 C286 142 284 162 286 182", 1, 1.2), S("M331 214 C332 170 328 148 322 144 C316 140 306 140 302 144 C296 148 294 164 295 180", 1.3, 1, 1.1, 0.7), S("M350 214 C346 208 334 207 330 209 M296 226 L294 288 M343 266 C330 270 308 270 295 266", 1.6, 0.8, 1.2)],
+    // the table top is filled with paper so the chairs tuck in behind it
+    tableFill: "M30 196 C30 156 330 156 330 196 C330 236 30 236 32 194",
+    front: [S("M30 196 C30 156 330 156 330 196 C330 236 30 236 32 194", 0.3, 1.4, 1.6), S("M37 191 C42 161 320 159 326 189", 1, 1, 0.9, 0.4), S("M31 201 C34 241 326 241 329 201", 1.2, 1, 1.2), S("M172 232 C171 246 170 262 168 280 M188 232 C189 246 190 262 192 280", 1.4, 0.8), S("M128 285 C150 275 210 275 232 285 C200 292 160 292 128 285", 1.7, 0.8), S("M175 240 l7 -5 M174 248 l9 -7 M173 256 l10 -7 M172 264 l11 -8", 2, 0.7, 0.9, 0.55), S("M8 293 h70 M100 295 h54 M206 295 h54 M282 293 h70", 2.1, 0.6, 0.9, 0.35), S("M156 176 L162 140 L204 140 L210 176", 1.8, 0.8), S("M204 140 L215 172", 2.2, 0.3, 1.1, 0.7), ...cup(112, 196, 1.05, 1.3), ...cup(244, 190, 0.95, 2.4), S("M152 214 C152 203 224 203 224 214 C224 225 152 225 154 213", 2, 0.7), ...(PAIRING_SKETCH[pairing] || PAIRING_SKETCH.croissant).map((p, i) => S(p.d, 2.4 + i * 0.3, 0.7, p.w || 1.4, p.o || 1)), S("M40 110 C60 116 84 128 98 150 M92 148 L98 150 L98 143", 3.3, 0.6, 1.1), S("M318 108 C300 112 280 124 266 146 M272 146 L266 146 L268 140", 3.6, 0.6, 1.1), S("M264 34 C258 36 252 40 246 46 M246 40 L246 46 L252 46", 3.9, 0.5, 1.1)],
+    notes: [{
+      x: 6,
+      y: 104,
+      text: `your ${usual}`,
+      at: 3
+    }, {
+      x: 352,
+      y: 102,
+      text: "your +1",
+      anchor: "end",
+      at: 3.3
+    }, {
+      x: 266,
+      y: 30,
+      text: "the view",
+      at: 3.6
+    }],
+    name,
+    emblem: {
+      x: 112,
+      y: 178,
+      h: 12.6,
+      at: 2.6
+    }
+  };
+}
+
+// Graphite grain plus a slight hand wobble.
+function PencilFilter() {
+  return /*#__PURE__*/React.createElement("filter", {
+    id: "nod-pencil",
+    x: "-5%",
+    y: "-5%",
+    width: "110%",
+    height: "110%"
+  }, /*#__PURE__*/React.createElement("feTurbulence", {
+    type: "fractalNoise",
+    baseFrequency: "0.9",
+    numOctaves: "2",
+    seed: "3",
+    result: "grain"
+  }), /*#__PURE__*/React.createElement("feColorMatrix", {
+    in: "grain",
+    type: "matrix",
+    values: "0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.3 1.45",
+    result: "mask"
+  }), /*#__PURE__*/React.createElement("feComposite", {
+    in: "SourceGraphic",
+    in2: "mask",
+    operator: "in",
+    result: "grainy"
+  }), /*#__PURE__*/React.createElement("feTurbulence", {
+    type: "fractalNoise",
+    baseFrequency: "0.035",
+    numOctaves: "2",
+    seed: "4",
+    result: "wobble"
+  }), /*#__PURE__*/React.createElement("feDisplacementMap", {
+    in: "grainy",
+    in2: "wobble",
+    scale: "1.8",
+    xChannelSelector: "R",
+    yChannelSelector: "G"
+  }));
+}
+const TableSketch = React.memo(function TableSketch(_ref29) {
+  let {
+    usual,
+    name,
+    pairing
+  } = _ref29;
+  const data = useMemo(() => sketchData({
+    usual,
+    name,
+    pairing
+  }), [usual, name, pairing]);
+  const line = (s, i) => /*#__PURE__*/React.createElement("path", {
+    key: i,
+    d: s.d,
+    pathLength: "1",
+    className: "nod-draw",
+    fill: "none",
+    stroke: PENCIL,
+    strokeWidth: s.w,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    opacity: s.o,
+    style: {
+      animationDelay: `${s.at}s`,
+      animationDuration: `${s.dur}s`
+    }
+  });
+  return /*#__PURE__*/React.createElement("svg", {
+    viewBox: "0 0 360 300",
+    className: "h-auto w-full overflow-visible",
+    role: "img",
+    "aria-label": `Pencil sketch of a café table by a window, set for ${name} and a guest`
+  }, /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement(PencilFilter, null)), /*#__PURE__*/React.createElement("g", {
+    filter: "url(#nod-pencil)"
+  }, data.back.map(line)), /*#__PURE__*/React.createElement("path", {
+    d: data.tableFill,
+    fill: PAPER
+  }), /*#__PURE__*/React.createElement("g", {
+    filter: "url(#nod-pencil)"
+  }, data.front.map(line), /*#__PURE__*/React.createElement("text", {
+    x: "183",
+    y: "152",
+    textAnchor: "middle",
+    className: "nod-fade font-type",
+    style: {
+      animationDelay: "2.2s"
+    },
+    fontSize: "6.2",
+    letterSpacing: "1.4",
+    fill: PENCIL,
+    fillOpacity: "0.7"
+  }, "RESERVED"), /*#__PURE__*/React.createElement("text", {
+    x: "183",
+    y: "170",
+    textAnchor: "middle",
+    className: "nod-write font-hand",
+    style: {
+      animationDelay: "2.3s"
+    },
+    fontSize: "19",
+    fontWeight: "600",
+    fill: PENCIL
+  }, name), data.notes.map(n => /*#__PURE__*/React.createElement("text", {
+    key: n.text,
+    x: n.x,
+    y: n.y,
+    textAnchor: n.anchor || "start",
+    className: "nod-write font-hand",
+    style: {
+      animationDelay: `${n.at}s`
+    },
+    fontSize: "17",
+    fontWeight: "600",
+    fill: PENCIL
+  }, n.text))), /*#__PURE__*/React.createElement(EmblemAt, {
+    x: data.emblem.x,
+    y: data.emblem.y,
+    height: data.emblem.h,
+    fill: BRAND_GOLD,
+    className: "nod-fade",
+    style: {
+      animationDelay: `${data.emblem.at}s`
+    }
+  }));
+});
+
+/* Canvas versions of the page's pencil work, for the shareable photo. */
+
+function drawSketch(ctx, data, ox, oy, s) {
+  const layer = document.createElement("canvas");
+  layer.width = ctx.canvas.width;
+  layer.height = ctx.canvas.height;
+  const g = layer.getContext("2d");
+  g.translate(ox, oy);
+  g.scale(s, s);
+  g.lineCap = "round";
+  g.lineJoin = "round";
+  g.strokeStyle = PENCIL;
+  const draw = st => {
+    const p = new Path2D(st.d);
+    g.globalAlpha = st.o;
+    g.lineWidth = st.w * 1.1;
+    g.stroke(p);
+    // a lighter second pass, slightly off, the way pencil lines double up
+    g.save();
+    g.globalAlpha = st.o * 0.35;
+    g.translate(0.5, -0.35);
+    g.stroke(p);
+    g.restore();
+  };
+  data.back.forEach(draw);
+  g.globalAlpha = 1;
+  g.fillStyle = PAPER;
+  g.fill(new Path2D(data.tableFill));
+  data.front.forEach(draw);
+  g.fillStyle = PENCIL;
+  g.globalAlpha = 0.7;
+  g.font = "700 6.2px 'Courier Prime', monospace";
+  drawSpaced(g, "RESERVED", 183, 152, 1.4, "center");
+  g.globalAlpha = 1;
+  g.textAlign = "center";
+  g.font = "600 19px Caveat, cursive";
+  g.fillText(data.name, 183, 170);
+  g.font = "600 17px Caveat, cursive";
+  data.notes.forEach(n => {
+    g.textAlign = n.anchor === "end" ? "right" : "left";
+    g.fillText(n.text, n.x, n.y);
+  });
+
+  // lift tiny specks out of the graphite for a pencil grain
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  g.globalCompositeOperation = "destination-out";
+  for (let i = 0; i < 26000; i++) {
+    g.globalAlpha = Math.random() * 0.5;
+    g.fillRect(ox + Math.random() * 360 * s, oy + Math.random() * 300 * s, 1.6, 1.6);
+  }
+  ctx.drawImage(layer, 0, 0);
+  drawEmblem(ctx, ox + data.emblem.x * s, oy + data.emblem.y * s, data.emblem.h * s, BRAND_GOLD);
+}
+
+// Points of a loose, slightly overshooting hand-drawn loop (used on the page and in the photo).
+function loopPoints(cx, cy, rx, ry) {
+  const pts = [];
+  for (let t = 0; t <= Math.PI * 2.15; t += 0.08) {
+    const k = 1 + Math.sin(t * 3) * 0.015 + (t > Math.PI * 2 ? 0.06 : 0);
+    pts.push([cx + Math.cos(t - 0.3) * rx * k, cy + Math.sin(t - 0.3) * ry * k]);
+  }
+  return pts;
+}
+function pencilLoop(ctx, x, y, w, h) {
+  ctx.save();
+  ctx.strokeStyle = PENCIL;
+  ctx.globalAlpha = 0.85;
+  ctx.lineWidth = 3;
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
+  ctx.beginPath();
+  loopPoints(x + w / 2, y + h / 2, w / 2 + 26, h / 2 + 16).forEach((_ref30, i) => {
+    let [px, py] = _ref30;
+    return i ? ctx.lineTo(px, py) : ctx.moveTo(px, py);
+  });
+  ctx.stroke();
+  ctx.restore();
+}
+function drawStamp(ctx, cx, cy, r, ringText) {
+  const size = Math.ceil(r * 2 + 20);
+  const layer = document.createElement("canvas");
+  layer.width = size;
+  layer.height = size;
+  const g = layer.getContext("2d");
+  g.translate(size / 2, size / 2);
+  g.rotate(-0.21);
+  g.strokeStyle = BRAND_GOLD;
+  g.fillStyle = BRAND_GOLD;
+  g.lineWidth = r * 0.048;
+  g.beginPath();
+  g.arc(0, 0, r * 0.94, 0, Math.PI * 2);
+  g.stroke();
+  g.lineWidth = r * 0.02;
+  g.beginPath();
+  g.arc(0, 0, r * 0.56, 0, Math.PI * 2);
+  g.stroke();
+  g.font = `700 ${r * 0.13}px 'Courier Prime', monospace`;
+  g.textAlign = "center";
+  g.textBaseline = "middle";
+  const chars = [...ringText];
+  chars.forEach((ch, i) => {
+    g.save();
+    g.rotate(-Math.PI / 2 + i * Math.PI * 2 / chars.length);
+    g.translate(0, -r * 0.75);
+    g.fillText(ch, 0, 0);
+    g.restore();
+  });
+  drawEmblem(g, 0, 0, r * 0.62, BRAND_GOLD);
+  // rubber-stamp speckle
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  g.globalCompositeOperation = "destination-out";
+  for (let i = 0; i < 2600; i++) {
+    g.globalAlpha = Math.random() * 0.7;
+    g.fillRect(Math.random() * size, Math.random() * size, 1.5, 1.5);
+  }
+  ctx.save();
+  ctx.globalAlpha = 0.92;
+  ctx.drawImage(layer, cx - size / 2, cy - size / 2);
+  ctx.restore();
+}
+
+// The last page as a 1080×1920 photo: the same sketch, typed note and stamp, ready for stories.
+async function renderInvitationImage(_ref31) {
+  let {
+    drink,
+    accepted
+  } = _ref31;
+  const TYPE = "'Courier Prime', 'Courier New', monospace";
+  const HAND = "Caveat, 'Segoe Script', cursive";
+  try {
+    await Promise.all([`700 40px ${TYPE}`, `400 40px ${TYPE}`, `600 40px ${HAND}`].map(f => document.fonts.load(f)));
+  } catch (e) {
+    /* fall back to system fonts */
+  }
+  const W = 1080;
+  const H = 1920;
+  const c = document.createElement("canvas");
+  c.width = W;
+  c.height = H;
+  const x = c.getContext("2d");
+  x.fillStyle = "#EFE8E0";
+  x.fillRect(0, 0, W, H);
+  const [px, py, pw, ph] = [60, 130, 960, 1680];
+  x.save();
+  x.shadowColor = "rgba(30,25,21,0.18)";
+  x.shadowBlur = 50;
+  x.shadowOffsetY = 24;
+  roundRectPath(x, px, py, pw, ph, 44);
+  x.fillStyle = PAPER;
+  x.fill();
+  x.restore();
+  x.save();
+  roundRectPath(x, px, py, pw, ph, 44);
+  x.clip();
+  x.fillStyle = "rgba(140,98,57,0.16)";
+  for (let gy = py + 24; gy < py + ph; gy += 40) {
+    for (let gx = px + 24; gx < px + pw; gx += 40) {
+      x.beginPath();
+      x.arc(gx, gy, 2, 0, Math.PI * 2);
+      x.fill();
+    }
+  }
+  x.restore();
+  x.save();
+  x.translate(540, py);
+  x.rotate(-0.05);
+  x.fillStyle = "rgba(230,207,166,0.8)";
+  x.fillRect(-130, -26, 260, 54);
+  x.restore();
+
+  // header: typed label, gold wordmark
+  x.textAlign = "left";
+  x.fillStyle = "rgba(44,34,30,0.62)";
+  x.font = `400 24px ${TYPE}`;
+  splitLines(COPY.inviteLabel).forEach((l, i) => drawSpaced(x, l.toUpperCase(), 120, 232 + i * 36, 3));
+  const wm = 46 / 238;
+  drawParts(x, NOD_WORDMARK, 960 - 687 * wm, 200 - 258 * wm, wm, BRAND_GOLD);
+  drawSketch(x, sketchData({
+    usual: drink.base.short.toLowerCase(),
+    name: GUEST.first,
+    pairing: drink.pairing.id
+  }), 120, 300, 840 / 360);
+
+  // typed note
+  let y = 1100;
+  x.textAlign = "left";
+  x.fillStyle = "#1E1915";
+  x.font = `700 76px ${TYPE}`;
+  splitLines(COPY.inviteHeadline).forEach(l => {
+    x.fillText(l, 120, y);
+    y += 86;
+  });
+  y += 4;
+  x.font = `400 38px ${TYPE}`;
+  x.fillStyle = "rgba(44,34,30,0.8)";
+  wrapLines(x, COPY.inviteLine, 840).forEach(l => {
+    x.fillText(l, 120, y);
+    y += 52;
+  });
+  y += 18;
+  x.font = `700 38px ${TYPE}`;
+  x.fillStyle = "#1E1915";
+  const when = `${COPY.inviteDate} · ${COPY.inviteTime}`;
+  x.fillText(when, 120, y);
+  pencilLoop(x, 120, y - 34, x.measureText(when).width, 44);
+  y += 74;
+  x.font = `400 34px ${TYPE}`;
+  x.fillStyle = "rgba(44,34,30,0.8)";
+  splitLines(COPY.inviteVenue).forEach(l => {
+    x.fillText(l, 120, y);
+    y += 48;
+  });
+
+  // handwriting, sign-off and stamp
+  x.save();
+  x.translate(960, Math.max(y + 10, 1505));
+  x.rotate(-0.06);
+  x.fillStyle = PENCIL;
+  x.font = `600 58px ${HAND}`;
+  x.textAlign = "right";
+  x.fillText(COPY.inviteHandNote, 0, 0);
+  x.restore();
+  x.textAlign = "left";
+  x.fillStyle = PENCIL;
+  x.font = `600 70px ${HAND}`;
+  x.fillText(COPY.inviteSignoff, 120, 1650);
+  x.fillStyle = "rgba(44,34,30,0.6)";
+  x.font = `400 24px ${TYPE}`;
+  drawSpaced(x, COPY.inviteSignature.toUpperCase(), 120, 1696, 3);
+  const ring = `${accepted ? COPY.stampText : `A nod for ${GUEST.first}`} · ${COPY.inviteDateShort} · `.toUpperCase();
+  drawStamp(x, 860, 1650, 105, ring);
+  x.textAlign = "center";
+  x.fillStyle = "rgba(44,34,30,0.55)";
+  x.font = `400 24px ${TYPE}`;
+  x.fillText(VENUE.handle, 540, 1772);
+  return c.toDataURL("image/png");
+}
+const SHARE_FILE = "nod-invitation-reem.png";
+function ShareSheet(_ref32) {
+  let {
+    open,
+    onClose,
+    drink,
+    accepted
+  } = _ref32;
+  const [url, setUrl] = useState(null);
+  const [canShare, setCanShare] = useState(false);
+  const [note, setNote] = useState("");
+  const imageKey = `${drink.title}|${drink.pairing.id}|${accepted}`;
+  useEffect(() => {
+    if (!open) return undefined;
+    let alive = true;
+    setUrl(null);
+    setNote("");
+    renderInvitationImage({
+      drink,
+      accepted
+    }).then(u => alive && setUrl(u)).catch(() => alive && setNote("Couldn’t make the photo on this device."));
+    try {
+      const probe = new File([new Blob(["x"], {
+        type: "image/png"
+      })], "probe.png", {
+        type: "image/png"
+      });
+      setCanShare(Boolean(navigator.canShare && navigator.canShare({
+        files: [probe]
+      })));
+    } catch (e) {
+      setCanShare(false);
+    }
+    return () => {
+      alive = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open, imageKey]);
+  const share = async () => {
+    if (!url) return;
+    try {
+      const blob = await (await fetch(url)).blob();
+      const file = new File([blob], SHARE_FILE, {
+        type: "image/png"
+      });
+      await navigator.share({
+        files: [file],
+        title: `A nod to ${GUEST.full}`,
+        text: `See you at ${VENUE.handle}`
+      });
+    } catch (e) {
+      if (!e || e.name !== "AbortError") setNote("Sharing isn’t available here. Save the photo instead.");
+    }
+  };
+  return /*#__PURE__*/React.createElement(Sheet, {
+    open: open,
+    onClose: onClose,
+    eyebrow: "Save or share",
+    title: "Your invitation, as a photo"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "mx-auto overflow-hidden rounded-2xl bg-[#EFE8E0] shadow-[0_30px_60px_-30px_rgba(30,25,21,0.6)]",
+    style: {
+      width: "min(250px, 60vw, 30vh)",
+      aspectRatio: "9 / 16"
+    }
+  }, url ? /*#__PURE__*/React.createElement("img", {
+    src: url,
+    alt: `Invitation for ${GUEST.full}`,
+    className: "nod-fade h-full w-full object-cover"
+  }) : /*#__PURE__*/React.createElement("div", {
+    className: "grid h-full place-items-center"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "nod-blink font-hand text-[18px] text-[#2B2724]"
+  }, "sketching it for you\u2026"))), /*#__PURE__*/React.createElement("p", {
+    className: "mx-auto mt-4 max-w-[30ch] text-center text-[12.5px] leading-relaxed text-[#2C221E]/65"
+  }, "Long-press to keep it, or share it to your story whenever you like."), note && /*#__PURE__*/React.createElement("p", {
+    className: "mt-2 text-center text-[12px] text-[#8C6239]"
+  }, note), /*#__PURE__*/React.createElement("div", {
+    className: "mt-4 grid gap-2.5"
+  }, canShare && /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: share,
+    disabled: !url,
+    className: `${BTN_PRIMARY} disabled:opacity-60`
+  }, /*#__PURE__*/React.createElement(Share2, {
+    size: 16
+  }), " Share to stories"), /*#__PURE__*/React.createElement("a", {
+    href: url || undefined,
+    download: SHARE_FILE,
+    "aria-disabled": !url,
+    className: `${canShare ? BTN_GHOST : BTN_PRIMARY} ${url ? "" : "pointer-events-none opacity-60"}`
+  }, /*#__PURE__*/React.createElement(Download, {
+    size: 16
+  }), " Save photo")));
+}
+
+// Types a list of lines one character at a time, then stays typed (later edits appear instantly).
+function useTypedCount(texts) {
+  let {
+    speed = 36,
+    startDelay = 1100
+  } = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  const total = texts.reduce((n, t) => n + t.length, 0);
+  const key = texts.join("␞");
+  const [count, setCount] = useState(0);
+  const done = useRef(false);
+  useEffect(() => {
+    const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (done.current || reduce) {
+      done.current = true;
+      setCount(total);
+      return undefined;
+    }
+    const joined = texts.join("");
+    const ends = new Set();
+    texts.reduce((n, t) => {
+      ends.add(n + t.length);
+      return n + t.length;
+    }, 0);
+    let i = 0;
+    let timer;
+    setCount(0);
+    const tick = () => {
+      i += 1;
+      setCount(i);
+      if (i >= total) {
+        done.current = true;
+        return;
+      }
+      const ch = joined[i - 1];
+      timer = setTimeout(tick, ends.has(i) ? 420 : /[,.—·]/.test(ch) ? speed * 5 : speed * (0.6 + Math.random()));
+    };
+    timer = setTimeout(tick, startDelay);
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key]);
+  return [count, count >= total];
+}
+
+// A pencil loop drawn around the typed date once it's finished, sized to the line it circles.
+function PencilLoopMark() {
+  const ref = useRef(null);
+  const [box, setBox] = useState(null);
+  useEffect(() => {
+    const el = ref.current && ref.current.parentElement;
+    if (!el) return undefined;
+    const measure = () => setBox({
+      w: el.offsetWidth,
+      h: el.offsetHeight
+    });
+    measure();
+    const ro = window.ResizeObserver ? new ResizeObserver(measure) : null;
+    if (ro) ro.observe(el);
+    return () => ro && ro.disconnect();
+  }, []);
+  const d = box ? `M${loopPoints(box.w / 2, box.h / 2, box.w / 2 + 12, box.h / 2 + 7).map(_ref33 => {
+    let [px, py] = _ref33;
+    return `${px.toFixed(1)} ${py.toFixed(1)}`;
+  }).join(" L")}` : "";
+  return /*#__PURE__*/React.createElement("svg", {
+    ref: ref,
+    className: "pointer-events-none absolute left-0 top-0 overflow-visible",
+    width: box ? box.w : 0,
+    height: box ? box.h : 0,
+    "aria-hidden": "true"
+  }, box && /*#__PURE__*/React.createElement("path", {
+    d: d,
+    pathLength: "1",
+    className: "nod-draw",
+    fill: "none",
+    stroke: PENCIL,
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    opacity: "0.85",
+    style: {
+      animationDuration: "0.9s"
+    }
+  }));
+}
+function TypedNote(_ref34) {
+  let {
+    lines,
+    after = null
+  } = _ref34;
+  const [count, finished] = useTypedCount(lines.map(l => l.text));
+  let offset = 0;
+  const rows = lines.map(l => {
+    const start = offset;
+    offset += l.text.length;
+    return {
+      ...l,
+      shown: Math.max(0, Math.min(l.text.length, count - start))
+    };
+  });
+  const caretRow = finished ? rows.length - 1 : rows.findIndex(r => r.shown < r.text.length);
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+    className: "sr-only"
+  }, lines.map(l => l.text).join(" ")), /*#__PURE__*/React.createElement("div", {
+    "aria-hidden": "true"
+  }, rows.map((r, i) => {
+    const body = /*#__PURE__*/React.createElement(React.Fragment, null, r.text.slice(0, r.shown), i === caretRow && /*#__PURE__*/React.createElement("span", {
+      className: "relative inline-block w-0"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "nod-caret absolute -top-[0.82em] left-px h-[0.95em] w-[0.5ch] bg-[#2B2724]/70"
+    })), /*#__PURE__*/React.createElement("span", {
+      className: "opacity-0"
+    }, r.text.slice(r.shown)));
+    return /*#__PURE__*/React.createElement("p", {
+      key: r.id,
+      className: r.className
+    }, r.circle ? /*#__PURE__*/React.createElement("span", {
+      className: "relative inline-block"
+    }, body, r.shown === r.text.length && /*#__PURE__*/React.createElement(PencilLoopMark, null)) : body);
+  })), finished && after);
+}
+function NodStamp(_ref35) {
+  let {
+    dateLabel
+  } = _ref35;
+  return /*#__PURE__*/React.createElement("svg", {
+    viewBox: "0 0 100 100",
+    className: "nod-stamp-in absolute inset-0 h-full w-full text-[#C49430] mix-blend-multiply",
+    role: "img",
+    "aria-label": `${COPY.stampText}, ${dateLabel}`
+  }, /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("path", {
+    id: "nod-stamp-ring",
+    d: "M14 50 a36 36 0 1 1 72 0 a36 36 0 1 1 -72 0"
+  }), /*#__PURE__*/React.createElement("filter", {
+    id: "nod-stamp-ink"
+  }, /*#__PURE__*/React.createElement("feTurbulence", {
+    type: "fractalNoise",
+    baseFrequency: "1.1",
+    numOctaves: "2",
+    seed: "7",
+    result: "n"
+  }), /*#__PURE__*/React.createElement("feColorMatrix", {
+    in: "n",
+    type: "matrix",
+    values: "0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.75",
+    result: "speck"
+  }), /*#__PURE__*/React.createElement("feComposite", {
+    in: "SourceGraphic",
+    in2: "speck",
+    operator: "in"
+  }))), /*#__PURE__*/React.createElement("g", {
+    filter: "url(#nod-stamp-ink)",
+    fill: "currentColor"
+  }, /*#__PURE__*/React.createElement("circle", {
+    cx: "50",
+    cy: "50",
+    r: "47",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "2.4"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: "50",
+    cy: "50",
+    r: "28",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "1"
+  }), /*#__PURE__*/React.createElement("text", {
+    fontSize: "7",
+    letterSpacing: "1.5",
+    fontFamily: "'Courier Prime', monospace",
+    fontWeight: "700"
+  }, /*#__PURE__*/React.createElement("textPath", {
+    href: "#nod-stamp-ring"
+  }, COPY.stampText.toUpperCase(), " \xB7 ", dateLabel.toUpperCase(), " \xB7")), /*#__PURE__*/React.createElement(EmblemAt, {
+    x: 50,
+    y: 50,
+    height: 30
+  })));
+}
+function RsvpScreen(_ref36) {
+  let {
+    drink
+  } = _ref36;
+  const [shareOpen, setShareOpen] = useState(false);
+  const [accepted, setAccepted] = useState(false);
+  const closeShare = useCallback(() => setShareOpen(false), []);
+  const headline = "font-type text-[30px] font-bold leading-[1.15] text-[#1E1915] sm:text-[40px]";
+  const detail = "font-type text-[13.5px] leading-6 text-[#2C221E]/80 sm:text-[15px]";
+  const lines = [...splitLines(COPY.inviteHeadline).map((text, i) => ({
+    id: `head${i}`,
+    text,
+    className: headline
+  })), {
+    id: "line",
+    text: COPY.inviteLine,
+    className: `mt-2 ${detail}`
+  }, {
+    id: "when",
+    text: `${COPY.inviteDate} · ${COPY.inviteTime}`,
+    className: `mt-3 ${detail} font-bold text-[#1E1915]`,
+    circle: true
+  }, ...splitLines(COPY.inviteVenue).map((text, i) => ({
+    id: `venue${i}`,
+    text,
+    className: `${i === 0 ? "mt-3 " : ""}${detail}`
+  }))].filter(l => l.text);
+
+  // Accepting stays on the page: the stamp lands, the beans fly, and sharing is offered, never pushed.
+  const accept = e => {
+    const r = e.currentTarget.getBoundingClientRect();
+    burstBeans(r.left + r.width / 2, r.top + r.height / 2);
+    setAccepted(true);
+  };
+  return /*#__PURE__*/React.createElement("section", {
+    className: "nod-screen mx-auto w-full max-w-xl"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-center"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: PILL
+  }, /*#__PURE__*/React.createElement(PenLine, {
+    size: 12
+  }), " ", COPY.invitePill)), /*#__PURE__*/React.createElement("article", {
+    className: "nod-paper relative mt-8 rounded-[26px] border border-[#E8DFD8] px-5 pb-6 pt-7 shadow-[0_40px_80px_-50px_rgba(30,25,21,0.6)] sm:px-9 sm:pb-9 sm:pt-9"
+  }, /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
+    className: "absolute -top-3 left-1/2 h-6 w-28 -translate-x-1/2 -rotate-3 bg-[#E6CFA6]/75 shadow-sm",
+    style: {
+      clipPath: "polygon(3% 0, 97% 4%, 100% 50%, 96% 100%, 2% 96%, 0 50%)"
+    }
+  }), /*#__PURE__*/React.createElement("header", {
+    className: "flex items-start justify-between gap-4"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "font-type text-[10px] uppercase leading-relaxed tracking-[0.18em] text-[#2C221E]/60"
+  }, /*#__PURE__*/React.createElement(Lines, {
+    text: COPY.inviteLabel
+  })), /*#__PURE__*/React.createElement(NodWordmark, {
+    className: "h-[18px] w-auto text-[#C49430]"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3"
+  }, /*#__PURE__*/React.createElement(TableSketch, {
+    usual: drink.base.short.toLowerCase(),
+    name: GUEST.first,
+    pairing: drink.pairing.id
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3"
+  }, /*#__PURE__*/React.createElement(TypedNote, {
+    lines: lines,
+    after: /*#__PURE__*/React.createElement("p", {
+      className: "nod-write mt-3 origin-right -rotate-3 pr-1 text-right font-hand text-[26px] font-semibold leading-none text-[#2B2724]"
+    }, COPY.inviteHandNote)
+  })), /*#__PURE__*/React.createElement("footer", {
+    className: "mt-5 flex items-end justify-between gap-3"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+    className: "font-hand text-[30px] font-semibold leading-none text-[#2B2724]"
+  }, COPY.inviteSignoff), /*#__PURE__*/React.createElement("p", {
+    className: "mt-1.5 font-type text-[10px] uppercase tracking-[0.18em] text-[#2C221E]/55"
+  }, COPY.inviteSignature)), /*#__PURE__*/React.createElement("div", {
+    className: "relative h-[96px] w-[96px] shrink-0"
+  }, accepted ? /*#__PURE__*/React.createElement(NodStamp, {
+    dateLabel: COPY.inviteDateShort
+  }) : /*#__PURE__*/React.createElement("div", {
+    className: "grid h-full w-full -rotate-6 place-items-center rounded-full border border-dashed border-[#2B2724]/40 text-center"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "font-hand text-[17px] font-semibold leading-tight text-[#2B2724]/75"
+  }, /*#__PURE__*/React.createElement(Lines, {
+    text: COPY.stampHint
+  })))))), accepted ? /*#__PURE__*/React.createElement("div", {
+    className: "nod-rise mt-6 text-center",
+    role: "status"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "font-hand text-[26px] font-semibold leading-snug text-[#2B2724]"
+  }, fill(COPY.welcomeBack, {
+    name: GUEST.first,
+    fullname: GUEST.full,
+    date: COPY.inviteDate,
+    time: COPY.inviteTime
+  })), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: () => setShareOpen(true),
+    className: `${BTN_GHOST} mt-5`
+  }, /*#__PURE__*/React.createElement(Share2, {
+    size: 15
+  }), " ", COPY.storyButton), /*#__PURE__*/React.createElement("p", {
+    className: "mt-2.5 text-[12px] text-[#2C221E]/55"
+  }, COPY.storyHint)) : /*#__PURE__*/React.createElement("div", {
+    className: "mt-6"
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: accept,
+    className: BTN_PRIMARY
+  }, /*#__PURE__*/React.createElement(Check, {
+    size: 16,
+    className: "text-[#C49A6C]",
+    strokeWidth: 2.5
+  }), " ", COPY.acceptButton)), /*#__PURE__*/React.createElement("div", {
+    className: "mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[12.5px]"
+  }, !accepted && /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: () => setShareOpen(true),
+    className: LINK
+  }, /*#__PURE__*/React.createElement(Share2, {
+    size: 13
+  }), " ", COPY.shareButton), /*#__PURE__*/React.createElement("a", {
+    href: VENUE.mapsUrl,
+    target: "_blank",
+    rel: "noreferrer",
+    className: LINK
+  }, /*#__PURE__*/React.createElement(Navigation, {
+    size: 13
+  }), " Directions")), /*#__PURE__*/React.createElement("footer", {
+    className: "mt-14 pb-4 text-center"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "mx-auto mb-5 h-px w-16 bg-[#C49A6C]/60"
+  }), /*#__PURE__*/React.createElement("p", {
+    className: "text-[11px] font-medium uppercase tracking-[0.34em] text-[#1E1915]"
+  }, VENUE.tagline), /*#__PURE__*/React.createElement("p", {
+    className: "mt-2 text-[11px] text-[#2C221E]/55"
+  }, "A private invitation for ", GUEST.full, " \xB7 ", GUEST.handle)), /*#__PURE__*/React.createElement(ShareSheet, {
+    open: shareOpen,
+    onClose: closeShare,
+    drink: drink,
+    accepted: accepted
+  }));
+}
+
+/* ───────────────────────── App ───────────────────────── */
+
+// `previewStep` ({ step }) lets the text editor's live preview jump between screens.
+function NodInvitation() {
+  let {
+    previewStep
+  } = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  const [step, setStep] = useState(0);
+  const [maxStep, setMaxStep] = useState(0);
+  const [order, setOrder] = useState(DEFAULT_ORDER);
+  const [soundOn, toggleSound] = useCafeAmbience();
+  const drink = useMemo(() => composeDrink(order), [order]);
+  const go = useCallback(n => {
+    setStep(n);
+    setMaxStep(m => Math.max(m, n));
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }, []);
+  useEffect(() => {
+    if (previewStep) go(previewStep.step);
+  }, [previewStep, go]);
+  return /*#__PURE__*/React.createElement("div", {
+    className: "nod-root nod-grain relative min-h-[100dvh] overflow-x-clip bg-[#FAF7F2] text-[#1E1915] selection:bg-[#C49A6C]/30"
+  }, /*#__PURE__*/React.createElement("style", null, CSS), /*#__PURE__*/React.createElement("div", {
+    "aria-hidden": "true",
+    className: "pointer-events-none fixed inset-0 z-0",
+    style: {
+      background: "radial-gradient(900px 520px at 88% -12%, rgba(196,154,108,.18), transparent 60%), radial-gradient(760px 520px at -12% 112%, rgba(140,98,57,.10), transparent 60%)"
+    }
+  }), /*#__PURE__*/React.createElement("header", {
+    className: "relative z-30 mx-auto w-full max-w-6xl px-4 sm:px-8",
+    style: {
+      paddingTop: "max(16px, env(safe-area-inset-top))"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between"
+  }, /*#__PURE__*/React.createElement(Wordmark, null), /*#__PURE__*/React.createElement(SoundToggle, {
+    on: soundOn,
+    onToggle: toggleSound
+  })), /*#__PURE__*/React.createElement(Progress, {
+    step: step,
+    maxStep: maxStep,
+    onNav: go
+  })), /*#__PURE__*/React.createElement("main", {
+    className: "relative z-10 mx-auto w-full max-w-6xl px-4 pb-16 pt-6 sm:px-8 sm:pt-10"
+  }, step === 0 && /*#__PURE__*/React.createElement(EnvelopeScreen, {
+    onOpened: () => go(1)
+  }), step === 1 && /*#__PURE__*/React.createElement(BrewScreen, {
+    order: order,
+    setOrder: setOrder,
+    drink: drink,
+    onComplete: () => go(2)
+  }), step === 2 && /*#__PURE__*/React.createElement(LetterScreen, {
+    drink: drink,
+    onNext: () => go(3),
+    onEdit: () => go(1)
+  }), step === 3 && /*#__PURE__*/React.createElement(RsvpScreen, {
+    drink: drink
+  })));
+}
+
+// Standalone root. With ?preview (inside edit.html) it takes live text and screen jumps from the editor.
+function Root() {
+  const [, setVersion] = useState(0);
+  const [jump, setJump] = useState(null);
+  useEffect(() => {
+    if (!new URLSearchParams(location.search).has("preview")) return undefined;
+    const onMessage = e => {
+      const m = e.data || {};
+      if (m.type === "nod-copy") {
+        Object.assign(COPY, DEFAULT_COPY, m.copy);
+        setVersion(v => v + 1);
+      }
+      if (m.type === "nod-go") setJump({
+        step: m.step
+      });
+    };
+    window.addEventListener("message", onMessage);
+    window.parent.postMessage({
+      type: "nod-ready"
+    }, "*");
+    return () => window.removeEventListener("message", onMessage);
+  }, []);
+  return /*#__PURE__*/React.createElement(NodInvitation, {
+    previewStep: jump
+  });
+}
+ReactDOM.createRoot(document.getElementById("root")).render(/*#__PURE__*/React.createElement(Root, null));
+</script>
+</body>
+</html>
